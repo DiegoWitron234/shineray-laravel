@@ -1,0 +1,35 @@
+
+
+/* Tamaño reducido para imágenes de vehículos */
+.img-small {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Efecto hover para imágenes */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para featurettes */
+.featurette-divider {
+  margin: 3rem 0;
+}
+
+/* Estilos para las opiniones en featurettes */
+.featurette-heading {
+  font-size: 2rem;
+}
+
+.text-body-secondary {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+
+
