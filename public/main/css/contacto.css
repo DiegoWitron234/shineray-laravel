@@ -1,133 +1,147 @@
 /* FONDO Y ESTILOS GENERALES */
 body {
-  background: #1d1d1d; /* Fondo oscuro */
-  color: #fff;         /* Texto blanco */
+    background: #1d1d1d; /* Fondo oscuro */
+    color: #fff;         /* Texto blanco */
 }
 
 /* CONTENEDOR PRINCIPAL */
 .contact-page {
-  min-height: calc(100vh - 70px); /* Ajuste si tienes un navbar fijo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+    min-height: calc(100vh - 70px); /* Ajuste si tienes un navbar fijo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 /* CONTENEDOR DEL CONTACTO */
 .contact-container {
-  display: flex;
-  flex-wrap: wrap;     /* Para que en pantallas pequeñas se ajuste */
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;     /* Para que en pantallas pequeñas se ajuste */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /* COLUMNA IZQUIERDA: INFORMACIÓN */
 .contact-info {
-  flex: 1;
-  min-width: 280px;    /* Asegura que no colapse en pantallas muy pequeñas */
-  margin-right: 40px;
+    flex: 1;
+    min-width: 280px;    /* Asegura que no colapse en pantallas muy pequeñas */
+    margin-right: 40px;
 }
 
 /* TITULO */
 .contact-info h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #fff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
 }
 
 /* TEXTO */
 .contact-info p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #ccc;
 }
 
 /* SECCIÓN DE REDES SOCIALES */
-/***************
-   Sección de redes sociales
-   (renombrada para evitar conflictos)
-***************/
 .contact-networks {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 .contact-networks p {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #fff; /* Ajusta según tu fondo */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
 }
 
-/* Sección de redes sociales */
-
-/* Ajusta la separación entre iconos */
-.contact-networks-icons {
-  display: flex;
-  gap: 2rem; /* Incrementa este valor para mayor separación (antes 1rem) */
+/* Contenedor de iconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 1.5rem; /* Espaciado entre los íconos */
+    align-items: center;
 }
 
-/* Ajusta el tamaño y el padding de los íconos */
+/* Íconos sin fondo gris ni padding extra */
 .contact-networks-icon img {
-  width: 32px;  /* Más grande que los 24px anteriores */
-  height: 32px;
-  background: #333; /* Fondo gris */
-  padding: 10px;    /* Un poco más de espacio interno (antes 8px) */
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+    width: 40px;  /* Tamaño más grande */
+    height: 40px;
+    background: none; /* Elimina el fondo gris */
+    padding: 0; /* Elimina el padding extra */
+    border-radius: 0; /* Quitar bordes redondeados */
+    transition: transform 0.3s ease;
 }
 
+/* Efecto de hover */
 .contact-networks-icon img:hover {
-  background: #555;
+    transform: scale(1.1); /* Hace que el icono crezca ligeramente */
 }
 
-
+/* Evitar el borde azul en algunos navegadores al hacer clic */
+.contact-networks-icon:focus {
+    outline: none;
+}
 
 /* COLUMNA DERECHA: FORMULARIO */
 .contact-form {
-  flex: 1;
-  min-width: 300px;
-  margin-top: 1rem;  /* Espacio en pantallas pequeñas */
+    flex: 1;
+    min-width: 300px;
+    margin-top: 1rem;
 }
 
 /* FORMULARIO */
 .contact-form form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .contact-form label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: #fff;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #fff;
 }
 .contact-form label span {
-  color: #e74c3c; /* Color para el asterisco */
+    color: #e74c3c; /* Color para el asterisco */
 }
 .contact-form input,
 .contact-form textarea {
-  background: #2a2a2a;
-  border: 1px solid #444;
-  color: #fff;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  outline: none;
-  font-size: 1rem;
+    background: #2a2a2a;
+    border: 1px solid #666;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
 }
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #666;
+    border-color: #888;
 }
 .contact-form button.contact-button {
-  align-self: flex-start;
-  background: #e74c3c;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
+    align-self: flex-start;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 .contact-form button.contact-button:hover {
-  background: #c0392b;
+    background: #c0392b;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info {
+        margin-right: 0;
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center;
+    }
 }
