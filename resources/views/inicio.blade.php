@@ -24,15 +24,6 @@
             <div class="carousel-item active">
                 <div class="ratio ratio-16x9">
                     <img src="{{ asset('main/images/banner1.jpg') }}" class="d-block w-100" alt="Modelo 1">
-                    <!-- Overlay para oscurecer la imagen y mejorar la legibilidad -->
-                    <div class="carousel-overlay"></div>
-                </div>
-                <div class="container">
-                    <div class="carousel-caption text-start" data-aos="fade-up" data-aos-duration="1000">
-                        <h1 class="text-shadow">Contacto.</h1>
-                        <p class="opacity-75 text-shadow">Contáctanos para pedir tu automóvil.</p>
-                        <p><a class="btn btn-lg btn-primary" href="{{ route('contacto') }}">Contactar</a></p>
-                    </div>
                 </div>
             </div>
             <div class="carousel-item">
@@ -90,7 +81,7 @@
     </div>
     <hr class="featurette-divider" data-aos="fade-up">
     <div class="container" data-aos="fade-up">
-        <div class="row featurette">
+        <div class="row featurette align-items-start">
             <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">“Shineray cambió mi forma de movilizarme.” <span class="text-body-secondary">- Juan Pérez</span></h2>
                 <p class="lead">"Desde que adquirí mi Shineray X30, mi negocio ha mejorado notablemente. Es económico, confiable y el servicio es insuperable. ¡Totalmente recomendado!"</p>
@@ -100,18 +91,18 @@
             </div>
         </div>
         <hr class="featurette-divider" data-aos="fade-up">
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
+        <div class="row featurette align-items-start">
+            <div class="col-md-7">
                 <h2 class="featurette-heading fw-normal lh-1">“El Shineray T30 es mi mejor inversión.” <span class="text-body-secondary">- María López</span></h2>
                 <p class="lead">"La eficiencia y comodidad del Shineray T30 me han permitido ofrecer un servicio de calidad a mis clientes. Es un vehículo innovador y seguro."</p>
             </div>
-            <div class="col-md-5 order-md-1">
+            <div class="col-md-5">
                 <img src="{{ asset('main/images/persona2.jpg') }}" class="img-fluid rounded hover-lift" alt="Shineray X2">
             </div>
         </div>
         <hr class="featurette-divider" data-aos="fade-up">
-        <div class="row featurette">
-            <div class="col-md-7">
+        <div class="row featurette align-items-start">
+            <div class="col-md-7 d-flex flex-column justify-content-center">
                 <h2 class="featurette-heading fw-normal lh-1">“Shineray T50 es ideal para mi negocio.” <span class="text-body-secondary">- Carlos García</span></h2>
                 <p class="lead">"Utilizo mi Shineray T50 para el transporte de carga y ha sido excepcional. Su robustez y eficiencia han superado todas mis expectativas."</p>
             </div>
@@ -130,8 +121,5 @@
             once: false
         });
     </script>
-
-    <!-- Archivo de JavaScript personalizado -->
-    <script defer src="{{ asset('main/js/script.js') }}"></script>
 
 @endsection

@@ -174,12 +174,10 @@
                 <li class="nav-item me-5">
                     <a class="nav-link {{ request()->routeIs('vehiculos') ? 'active' : '' }}" href="{{ route('vehiculos') }}">Vehículos</a>
                 </li>
-                <!-- Puedes habilitar el enlace de Servicios si lo necesitas -->
-                <!--
           <li class="nav-item me-5">
-            <a class="nav-link {{ request()->routeIs('servicios') ? 'active' : '' }}" href="{{ route('servicios') }}">Servicios</a>
+            <a class="nav-link {{ request()->routeIs('distribuidores') ? 'active' : '' }}" href="{{ route('distribuidores') }}">Distribuidores</a>
           </li>
-          -->
+
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('contacto') ? 'active' : '' }}" href="{{ route('contacto') }}">Contacto</a>
                 </li>
@@ -192,14 +190,26 @@
     @yield('content')
 </main>
 
-<!-- Opcional: mensajes flash -->
-@if(session('message'))
-    <div class="container mt-3">
-        <div class="alert alert-info">
-            {{ session('message') }}
+<!-- Mensajes flash (éxito o error) -->
+<div class="container mt-3">
+    @if(session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
         </div>
-    </div>
-@endif
+    @endif
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+    @if(session('message'))
+        <div class="container mt-3">
+            <div class="alert alert-info">
+                {{ session('message') }}
+            </div>
+        </div>
+    @endif
+</div>
 
 <!-- Footer Oscuro (Estilo Shineray) -->
 <footer class="shineray-footer">
