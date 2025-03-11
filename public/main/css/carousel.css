@@ -3,46 +3,62 @@
 /* Espaciado debajo del pie de página y texto del cuerpo más claro */
 
 body {
-  padding-top: 3rem;
-  color: rgb(var(--bs-tertiary-color-rgb));
+    padding-top: 3rem;
+    color: rgb(var(--bs-tertiary-color-rgb));
 }
 
-/* PERSONALIZAR EL CARRUSEL
--------------------------------------------------- */
-
-/* Clase base del carrusel */
+/* Contenedor principal del carrusel */
 .carousel {
-  margin-bottom: 4rem;
-}
-/* Debido a la posición de la imagen, necesitamos ajustar el pie de foto */
-.carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
+    margin-bottom: 4rem;
 }
 
-/* Declarar alturas debido a la posición del elemento img */
+/* Controles y caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Cada elemento del carrusel */
 .carousel-item {
-  height: 32rem;
+    height: auto;
+    position: relative;
+    overflow: hidden; /* Para evitar que se muestren elementos fuera del contenedor */
+}
+
+/* Imagen dentro del carrusel */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;    /* Centra la imagen en el contenedor */
+    display: block;             /* Elimina espacios inferiores por elementos inline */
+}
+
+/* Ajuste de responsive: si deseas que el carrusel se ajuste en pantallas pequeñas */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 20rem; /* Ajusta la altura para dispositivos móviles */
+    }
 }
 
 /* CSS RESPONSIVO
 -------------------------------------------------- */
 
 @media (min-width: 40em) {
-  /* Incrementar el tamaño del contenido del carrusel */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
+    /* Incrementar el tamaño del contenido del carrusel */
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
 
-  .featurette-heading {
-    font-size: 50px;
-  }
+    .featurette-heading {
+        font-size: 50px;
+    }
 }
 
 @media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
+    .featurette-heading {
+        margin-top: 7rem;
+    }
 }
