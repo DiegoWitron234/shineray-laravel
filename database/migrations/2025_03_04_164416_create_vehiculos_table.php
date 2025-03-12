@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('modelo');
             $table->decimal('precio', 8, 2);
             $table->text('descripcion')->nullable();
-            $table->string('imagen')->nullable(); // Podrías guardar el path
+            $table->string('imagen')->nullable(); // Guarda el path
             $table->decimal('carga');
             $table->decimal('motor');
             $table->decimal('rendimiento');

@@ -42,7 +42,7 @@
 
                         <div class="card-body">
                             <h5 class="card-title">{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}</h5>
-                            <p class="card-text"><strong>Precio:</strong> {{ $vehiculo->precio }}</p>
+                            <p class="card-text"><strong>Precio:</strong> {{ '$' . number_format($vehiculo->precio, 0, '.', ',') }} MXN</p>
                             <p class="card-text">{{ \Illuminate\Support\Str::words($vehiculo->descripcion, 20) }}</p>
                         </div>
                         <div class="card-footer text-center">

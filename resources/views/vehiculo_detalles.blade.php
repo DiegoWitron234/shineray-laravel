@@ -46,7 +46,7 @@
                             <h4 class="mb-3">Descripción</h4>
                             <p>{{ $vehiculo->descripcion }}</p>
                             <h4 class="mb-3">Precio</h4>
-                            <h5>{{ $vehiculo->precio }} Quetzales</h5>
+                            <h5>{{ '$' . number_format($vehiculo->precio, 0, '.', ',') }} MXN</h5>
                         </div>
                     </div>
                 </section>
