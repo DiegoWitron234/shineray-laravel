@@ -32,27 +32,36 @@
 }
 
 
-
-/* Sección Italian Revolution */
+/* Sección Italian Revolution - Mejorada */
 .italian-revolution {
     background: url('../images/italian-revolution-bg.png') center/cover no-repeat;
     color: #fff;
-    /* Ajusta si necesitas que la imagen se "pegue" al navbar */
-    margin-top: -30px; /* O reduce si ves demasiado espacio negativo */
-    padding: 20px 20px 60px;
+    padding: 120px 20px;    /* Aumenta el padding vertical para mayor altura */
     position: relative;
     z-index: 1;
-
+    min-height: 500px;      /* Asegura una altura mínima para mostrar bien el fondo */
 }
 
 /* Contenedor interno para centrar y limitar el ancho */
 .italian-revolution-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;               /* Para dividir en 2 columnas */
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 40px;                   /* Espacio entre columnas */
+    gap: 40px;
+}
+
+/* Responsive: apilar columnas en móviles */
+@media (max-width: 768px) {
+    .italian-revolution-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .italian-left, .italian-right {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* Columna Izquierda: Íconos y Títulos */
@@ -131,3 +140,10 @@
     margin-bottom: 0.5em;
 }
 
+.italian-image {
+    max-width: 400px;  /* Ajusta este valor según lo que consideres "promedio" */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
