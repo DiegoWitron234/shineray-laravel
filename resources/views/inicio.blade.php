@@ -109,46 +109,49 @@
         <hr class="featurette-divider" data-aos="fade-up">
     </div>
 
-
     <!-- Sección Italian Revolution -->
     <section class="italian-revolution">
         <div class="italian-revolution-content">
-            <h2 class="italian-title">
-                <span class="italian-highlight">ITALIAN</span> Revolution
-            </h2>
-            <h3 class="italian-subtitle">
-                NUEVAS INCORPORACIONES A LA GAMA DE TURISMOS Y VEHÍCULOS COMERCIALES
-            </h3>
+            <!-- Columna Izquierda: Íconos y Títulos -->
+            <div class="italian-left">
+                <h2 class="italian-title">
+                    <span class="italian-highlight">ITALIAN</span> Revolution
+                </h2>
+                <h3 class="italian-subtitle">
+                    NUEVAS INCORPORACIONES A LA GAMA DE TURISMOS Y VEHÍCULOS COMERCIALES
+                </h3>
 
-            <!-- Lista con íconos al lado del texto -->
-            <ul class="italian-features">
-                <li>
-                    <img src="{{ asset('main/images/cambio-manual.png') }}" alt="Cambio Manual" class="feature-icon">
-                    <strong>Cambio Manual y Automático</strong>
-                </li>
-                <li>
-                    <img src="{{ asset('main/images/motor.png') }}" alt="Motores 1ST" class="feature-icon">
-                    <strong>Motores 1ST</strong>
-                </li>
-                <li>
-                    <img src="{{ asset('main/images/diseno-inteligente.png') }}" alt="Diseño Inteligente" class="feature-icon">
-                    <strong>Diseño Inteligente</strong>
-                </li>
-            </ul>
+                <!-- Lista con íconos al lado del texto (más grandes) -->
+                <ul class="italian-features">
+                    <li>
+                        <img src="{{ asset('main/images/cambio-manual.png') }}" alt="Cambio Manual" class="feature-icon">
+                        <strong>Cambio Manual y Automático</strong>
+                    </li>
+                    <li>
+                        <img src="{{ asset('main/images/motor.png') }}" alt="Motores 1ST" class="feature-icon">
+                        <strong>Motores 1ST</strong>
+                    </li>
+                    <li>
+                        <img src="{{ asset('main/images/diseno-inteligente.png') }}" alt="Diseño Inteligente" class="feature-icon">
+                        <strong>Diseño Inteligente</strong>
+                    </li>
+                </ul>
+            </div>
 
-            <p class="italian-desc">
-                Descubre los nuevos vehículos industriales de Shineray. Solicita una prueba de vehículo
-            </p>
+            <!-- Columna Derecha: Textos y Botón -->
+            <div class="italian-right">
+                <p class="italian-desc">
+                    Descubre los nuevos vehículos industriales de Shineray. Solicita una prueba de vehículo
+                </p>
+                <a href="#" class="btn-shineray">QUIERO PROBAR UN Shineray</a>
 
-            <a href="#" class="btn-shineray">QUIERO PROBAR UN Shineray</a>
-
-            <h4 class="italian-subtitle2">PRUÉBALOS Y SORPRÉNDETE</h4>
-            <p class="italian-desc">
-                ¡Con 5 y 8 años de garantía! Diseño, inteligencia y alma italiana
-            </p>
+                <h4 class="italian-subtitle2">PRUÉBALOS Y SORPRÉNDETE</h4>
+                <p class="italian-desc">
+                    ¡Con 5 y 8 años de garantía! Diseño, inteligencia y alma italiana
+                </p>
+            </div>
         </div>
     </section>
-
 
 
     <!-- AOS JS y otros scripts -->

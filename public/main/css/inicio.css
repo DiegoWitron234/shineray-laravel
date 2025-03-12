@@ -30,14 +30,16 @@
     font-size: 1.2rem;
     color: #6c757d;
 }
+
+
+
 /* Sección Italian Revolution */
 .italian-revolution {
     background: url('../images/italian-revolution-bg.png') center/cover no-repeat;
     color: #fff;
-    /* Reducimos el padding superior para acercar la imagen al navbar */
-    padding: 20px 20px 60px 20px;
-    /* Ajustamos el margen superior negativo para que se extienda hasta el navbar (ajusta el valor según la altura de tu navbar) */
-    margin-top: -30px;
+    /* Ajusta si necesitas que la imagen se "pegue" al navbar */
+    margin-top: -30px; /* O reduce si ves demasiado espacio negativo */
+    padding: 20px 20px 60px;
     position: relative;
     z-index: 1;
 
@@ -46,9 +48,24 @@
 /* Contenedor interno para centrar y limitar el ancho */
 .italian-revolution-content {
     max-width: 1200px;
-    margin-top: 20px;
-    text-align: left;
-    padding: 20px;
+    margin: 0 auto;
+    display: flex;               /* Para dividir en 2 columnas */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;                   /* Espacio entre columnas */
+}
+
+/* Columna Izquierda: Íconos y Títulos */
+.italian-left {
+    flex: 1;
+}
+
+/* Columna Derecha: Textos y Botón */
+.italian-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;     /* Para apilar textos y botón verticalmente */
+    justify-content: center;    /* Centra verticalmente el contenido */
 }
 
 /* Título principal */
@@ -57,7 +74,7 @@
     margin-bottom: 0.5em;
 }
 
-/* Resaltar la palabra "ITALIAN" en rojo */
+/* Palabra "ITALIAN" en rojo */
 .italian-highlight {
     color: red;
 }
@@ -69,28 +86,30 @@
     margin-bottom: 1em;
 }
 
-/* Lista de características con íconos */
+/* Lista de características (íconos y texto) */
 .italian-features {
     list-style: none;
     padding: 0;
-    margin-bottom: 1em;
+    margin: 0;
 }
 .italian-features li {
     display: flex;
     align-items: center;
-    margin: 0.3em 0;
+    margin: 0.8em 0;         /* Un poco más de espacio vertical */
     font-size: 1rem;
 }
 .feature-icon {
-    width: 25px; /* Tamaño reducido para los íconos */
+    width: 40px;             /* Íconos más grandes */
     margin-right: 10px;
 }
 
-/* Descripción y botón */
+/* Textos descriptivos */
 .italian-desc {
     font-size: 1rem;
     margin-bottom: 1em;
 }
+
+/* Botón */
 .btn-shineray {
     display: inline-block;
     background: red;
@@ -105,7 +124,10 @@
 .btn-shineray:hover {
     background: #c00;
 }
+
+/* Subtítulo secundario */
 .italian-subtitle2 {
     font-size: 1.3rem;
     margin-bottom: 0.5em;
 }
+
