@@ -1,5 +1,4 @@
 
-
 /* Tamaño reducido para imágenes de vehículos */
 .img-small {
   max-width: 300px;
@@ -31,5 +30,81 @@
     font-size: 1.2rem;
     color: #6c757d;
 }
+/* Sección Italian Revolution */
+.italian-revolution {
+    background: url('../images/italian-revolution-bg.png') center/cover no-repeat;
+    color: #fff;
+    /* Reducimos el padding superior para acercar la imagen al navbar */
+    padding: 20px 20px 60px 20px;
+    /* Ajustamos el margen superior negativo para que se extienda hasta el navbar (ajusta el valor según la altura de tu navbar) */
+    margin-top: -60px;
+    position: relative;
+    z-index: 1;
+}
 
+/* Contenedor interno para centrar y limitar el ancho */
+.italian-revolution-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+}
 
+/* Título principal */
+.italian-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+/* Resaltar la palabra "ITALIAN" en rojo */
+.italian-highlight {
+    color: red;
+}
+
+/* Subtítulo principal */
+.italian-subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 1em;
+}
+
+/* Lista de características con íconos */
+.italian-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+.italian-features li {
+    display: flex;
+    align-items: center;
+    margin: 0.3em 0;
+    font-size: 1rem;
+}
+.feature-icon {
+    width: 25px; /* Tamaño reducido para los íconos */
+    margin-right: 10px;
+}
+
+/* Descripción y botón */
+.italian-desc {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+.btn-shineray {
+    display: inline-block;
+    background: red;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    transition: background 0.3s ease;
+}
+.btn-shineray:hover {
+    background: #c00;
+}
+.italian-subtitle2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5em;
+}

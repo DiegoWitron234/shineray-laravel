@@ -84,7 +84,7 @@
             position: relative; /* Para posicionar el botón TOP dentro del footer */
             padding: 20px 0;
             font-size: 0.9rem;
-            margin-top: 2rem; /* Separación del contenido */
+
         }
         .shineray-footer a {
             color: #fff;
@@ -196,26 +196,7 @@
     @yield('content')
 </main>
 
-<!-- Mensajes flash (éxito o error) -->
-<div class="container mt-3">
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-    @if(session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
-    @if(session('message'))
-        <div class="container mt-3">
-            <div class="alert alert-info">
-                {{ session('message') }}
-            </div>
-        </div>
-    @endif
-</div>
+
 
 <!-- Footer Oscuro (Estilo Shineray) -->
 <footer class="shineray-footer">

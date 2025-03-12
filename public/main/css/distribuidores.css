@@ -1,0 +1,128 @@
+/* Sección hero con imagen de fondo */
+.hero-section {
+    position: relative;
+    background: url('../images/fondohistoria.jpg') center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura semitransparente para mejorar legibilidad */
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+.hero-title {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Contenedor principal específico para esta página */
+.distribuidores-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 10px;
+}
+
+/* Sección izquierda: Información */
+.distribuidor-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.distribuidor-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Sección derecha: Pestañas */
+.tab-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Estilos de las pestañas */
+.tabs {
+    display: flex;
+    border-bottom: 4px solid #aaa;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: #777;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tab:hover {
+    background: #a00;
+}
+
+.tab.active {
+    background: #a00;
+}
+
+/* Contenido de las pestañas */
+.tab-content {
+    background: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    min-height: 120px;
+    border: 1px solid #aaa;
+    margin-top: -1px;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Lista dentro de las pestañas */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Destacados */
+.highlight {
+    font-weight: bold;
+    color: #a00;
+}
+
+.price {
+    font-weight: bold;
+    color: #000;
+}

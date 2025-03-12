@@ -57,4 +57,25 @@
             </div>
         </div>
     </div>
+
+    <!-- Mensajes flash (éxito o error) -->
+    <div class="container mt-3">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if(session('error'))
+            <div class="alert alert-danger">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if(session('message'))
+            <div class="container mt-3">
+                <div class="alert alert-info">
+                    {{ session('message') }}
+                </div>
+            </div>
+        @endif
+    </div>
 @endsection
