@@ -39,16 +39,15 @@
     color: #fff;
     /* Ajusta si necesitas que la imagen se "pegue" al navbar */
     margin-top: -30px; /* O reduce si ves demasiado espacio negativo */
-    padding: 20px 20px 60px;
+    padding: 20px 20px 60px 20px;
     position: relative;
     z-index: 1;
-
 }
 
 /* Contenedor interno para centrar y limitar el ancho */
 .italian-revolution-content {
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 30px;
     display: flex;               /* Para dividir en 2 columnas */
     justify-content: space-between;
     align-items: flex-start;
