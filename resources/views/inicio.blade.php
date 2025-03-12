@@ -22,7 +22,7 @@
         <div class="carousel-inner">
             @foreach($banners as $banner)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img src="{{ asset('storage/' . $banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                    <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
                 </div>
             @endforeach
         </div>

@@ -60,6 +60,21 @@ return [
             'report' => false,
         ],
 
+        'vehiculos_public' => [
+            'driver' => 'local',
+            'root'   => public_path('uploads/vehiculos'),
+            'url'    => env('APP_URL') . '/uploads/vehiculos',
+            'visibility' => 'public',
+        ],
+
+        'banners_public' => [
+            'driver' => 'local',
+            'root'   => public_path('uploads/banners'),
+            'url'    => env('APP_URL') . '/uploads/banners',
+            'visibility' => 'public',
+        ],
+
+
     ],
 
     /*

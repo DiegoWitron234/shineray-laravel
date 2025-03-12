@@ -31,7 +31,8 @@ class BannerResource extends Resource
                 Forms\Components\FileUpload::make('imagen')
                     ->label('Imagen del Banner')
                     ->image()
-                    ->directory('banners')
+                    ->disk('banners_public')
+                    ->directory('')
                     ->required(),
                 // Campo opcional para un enlace
                 Forms\Components\TextInput::make('link')

@@ -37,7 +37,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-5">
                             @if($vehiculo->imagen)
-                                <img src="{{ asset('storage/' . $vehiculo->imagen) }}" alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}" class="img-fluid rounded hover-lift">
+                                <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}" alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}" class="img-fluid rounded hover-lift">
                             @else
                                 <img src="{{ asset('main/images/placeholder.svg') }}" alt="Sin imagen" class="img-fluid rounded hover-lift">
                             @endif

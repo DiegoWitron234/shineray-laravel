@@ -37,7 +37,8 @@ class VehiculoResource extends Resource
                     ->maxLength(65535),
                 Forms\Components\FileUpload::make('imagen')
                     ->image()
-                    ->directory('vehiculos'),
+                    ->disk('vehiculos_public')
+                    ->directory(''),
                 Forms\Components\TextInput::make('carga')
                     ->numeric()
                     ->required(),
