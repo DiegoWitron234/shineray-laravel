@@ -35,7 +35,7 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="{{ ($loop->index * 100) }}">
                     <div class="card h-100 shadow-sm">
                         @if($vehiculo->imagen)
-                            <img src="{{ asset('storage/' . $vehiculo->imagen) }}" alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}" class="img-fluid rounded hover-lift">
+                            <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}" alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}" class="img-fluid rounded hover-lift">
                         @else
                             <img src="{{ asset('main/images/placeholder.svg') }}" alt="Sin imagen" class="img-fluid rounded hover-lift">
                         @endif

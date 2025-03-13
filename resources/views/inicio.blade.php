@@ -15,22 +15,16 @@
     <!-- Carousel Principal -->
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            @foreach($banners as $index => $banner)
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+            @endforeach
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-
-                <img src="{{ asset('main/images/banner1.jpg') }}" class="d-block w-100" alt="Modelo 1">
-
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('main/images/banner2.jpg') }}" class="d-block w-100" alt="Modelo 2">
-            </div>
-            <div class="carousel-item">
-                <img src="{{ asset('main/images/banner3.jpg') }}" class="d-block w-100" alt="Modelo 3">
-            </div>
+            @foreach($banners as $banner)
+                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                </div>
+            @endforeach
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -41,6 +35,7 @@
             <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
+
 
     <!-- Sección de Modelos Populares -->
     <div class="container text-center my-2" data-aos="fade-up">
