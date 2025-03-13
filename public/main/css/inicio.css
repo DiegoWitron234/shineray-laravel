@@ -149,3 +149,34 @@
         text-align: center;
     }
 }
+
+
+/*
+    ESTILOS PARA LOS VEHÍCULOS
+ */
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.arrow-img {
+    width: 40px;  /* Ajusta a tu gusto */
+    height: auto;
+}
+
+.vehicle-image {
+    max-width: 600px;
+}
+

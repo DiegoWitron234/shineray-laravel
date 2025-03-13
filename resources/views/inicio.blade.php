@@ -37,72 +37,89 @@
     </div>
 
 
-    <!-- Sección de Modelos Populares -->
-    <div class="container text-center my-2" data-aos="fade-up">
-        <h1 class="display-5">Modelos populares</h1>
-        <p class="lead">Mira nuestros modelos más populares entre nuestros clientes</p>
-    </div>
-    <div class="container marketing mt-5" data-aos="fade-up">
+    <!-- Sección vehículos -->
+
+    <!-- Contenedor principal -->
+    <div class="container my-4">
+
+        <!-- Fila de Tabs -->
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs justify-content-center" id="modelTabs" role="tablist">
+                    @foreach($vehiculos as $index => $vehiculo)
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link {{ $loop->first ? 'active' : '' }}"
+                                id="tab-{{ $vehiculo->id }}"
+                                data-bs-toggle="tab"
+                                data-bs-target="#content-{{ $vehiculo->id }}"
+                                type="button" role="tab"
+                                aria-controls="content-{{ $vehiculo->id }}"
+                                aria-selected="{{ $loop->first ? 'true' : 'false' }}">
+                                {{ $vehiculo->modelo }}
+                            </button>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+
+        <!-- Separación para que la imagen quede más abajo de los tabs -->
+        <div class="mt-4"></div>
+
+        <!-- Fila donde irá la imagen y las flechas -->
         <div class="row justify-content-center">
-            <div class="col-lg-4 text-center mb-4">
-                <img src="{{ asset('main/images/X30.png') }}" class="img-fluid hover-lift img-small" alt="Shineray X30">
-                <h2 class="fw-normal mt-3">Shineray X30</h2>
-                <p>El Nuevo Shineray X30 ahora viene a convertirse en el campeón de la pega con su nuevo diseño y mayor capacidad de carga.</p>
-                <p><a class="btn btn-secondary" href="{{ route('vehiculos') }}">Ver detalles &raquo;</a></p>
-            </div>
-            <div class="col-lg-4 text-center mb-4">
-                <img src="{{ asset('main/images/T30.png') }}" class="img-fluid hover-lift img-small" alt="Shineray T30">
-                <h2 class="fw-normal mt-3">Shineray T30</h2>
-                <p>Shineray T30 con la suavidad de manejo y características que lo hacen preferido por los clientes, gracias a su amplio espacio para pasajeros.</p>
-                <p><a class="btn btn-secondary" href="{{ route('vehiculos') }}">Ver detalles &raquo;</a></p>
-            </div>
-            <div class="col-lg-4 text-center mb-4">
-                <img src="{{ asset('main/images/T50.png') }}" class="img-fluid hover-lift img-small" alt="Shineray T30">
-                <h2 class="fw-normal mt-3">Shineray T50</h2>
-                <p>La Shineray T50 redefine la versatilidad en el segmento de camionetas, combinando un motor de alto rendimiento con un diseño robusto y moderno.</p>
-                <p><a class="btn btn-secondary" href="{{ route('vehiculos') }}">Ver detalles &raquo;</a></p>
+            <div class="col-12 col-md-10 position-relative text-center">
+
+                <!-- Flecha Izquierda -->
+                <button type="button" class="arrow-button left-arrow" id="prevTab">
+                    <img src="{{ asset('main/images/FlechaIz.png') }}" alt="Anterior" class="arrow-img">
+                </button>
+
+                <!-- Contenido de Tabs (imagen y botones) -->
+                <div class="tab-content" id="modelTabsContent">
+                    @foreach($vehiculos as $index => $vehiculo)
+                        <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
+                             id="content-{{ $vehiculo->id }}"
+                             role="tabpanel"
+                             aria-labelledby="tab-{{ $vehiculo->id }}">
+                            <!-- Imagen principal -->
+                            @if($vehiculo->imagen)
+                                <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}"
+                                     alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
+                                     class="img-fluid vehicle-image mx-auto d-block">
+                            @else
+                                <img src="{{ asset('main/images/placeholder.svg') }}"
+                                     alt="Sin imagen"
+                                     class="img-fluid vehicle-image mx-auto d-block">
+                            @endif
+
+                            <!-- Botones Cotizar / Más info -->
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="btn btn-danger me-3">Cotizar</a>
+                                <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}" class="btn btn-secondary">
+                                    Más información
+                                </a>
+                            </div>
+
+                        </div>
+                    @endforeach
+                </div>
+
+                <!-- Flecha Derecha -->
+                <button type="button" class="arrow-button right-arrow" id="nextTab">
+                    <img src="{{ asset('main/images/FlechaDe.png') }}" alt="Siguiente" class="arrow-img">
+                </button>
+
             </div>
         </div>
     </div>
 
-    <!-- Sección de Opiniones -->
-    <div class="container text-center my-5" data-aos="fade-up">
-        <h1 class="display-5">Opiniones</h1>
-        <p class="lead">Conoce las opiniones de nuestros clientes satisfechos</p>
-    </div>
-    <hr class="featurette-divider" data-aos="fade-up">
-    <div class="container" data-aos="fade-up">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">“Shineray cambió mi forma de movilizarme.” <span class="text-body-secondary">- Juan Pérez</span></h2>
-                <p class="lead">"Desde que adquirí mi Shineray X30, mi negocio ha mejorado notablemente. Es económico, confiable y el servicio es insuperable. ¡Totalmente recomendado!"</p>
-            </div>
-            <div class="col-md-5">
-                <img src="{{ asset('main/images/persona1.jpg') }}" class="img-fluid rounded hover-lift" alt="Shineray X30">
-            </div>
-        </div>
-        <hr class="featurette-divider" data-aos="fade-up">
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading fw-normal lh-1">“El Shineray T30 es mi mejor inversión.” <span class="text-body-secondary">- María López</span></h2>
-                <p class="lead">"La eficiencia y comodidad del Shineray T30 me han permitido ofrecer un servicio de calidad a mis clientes. Es un vehículo innovador y seguro."</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <img src="{{ asset('main/images/persona2.jpg') }}" class="img-fluid rounded hover-lift" alt="Shineray X2">
-            </div>
-        </div>
-        <hr class="featurette-divider" data-aos="fade-up">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading fw-normal lh-1">“Shineray T50 es ideal para mi negocio.” <span class="text-body-secondary">- Carlos García</span></h2>
-                <p class="lead">"Utilizo mi Shineray T50 para el transporte de carga y ha sido excepcional. Su robustez y eficiencia han superado todas mis expectativas."</p>
-            </div>
-            <div class="col-md-5">
-                <img src="{{ asset('main/images/persona3.jpg') }}" class="img-fluid rounded hover-lift" alt="Shineray T50">
-            </div>
-        </div>
-        <hr class="featurette-divider" data-aos="fade-up">
-    </div>
+
+
+
+
+
     <!-- Sección Italian Revolution -->
     <section class="italian-revolution">
         <div class="italian-revolution-content">
@@ -156,5 +173,5 @@
             once: false
         });
     </script>
-    <script defer src="{{ asset('main/js/script.js') }}"></script>
+    <script defer src="{{ asset('main/js/inicio.js') }}"></script>
 @endsection
