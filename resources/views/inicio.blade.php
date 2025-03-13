@@ -108,20 +108,15 @@
         </div>
         <hr class="featurette-divider" data-aos="fade-up">
     </div>
-
     <!-- Sección Italian Revolution -->
     <section class="italian-revolution">
         <div class="italian-revolution-content">
-            <!-- Columna Izquierda: Íconos y Títulos -->
+            <!-- Columna Izquierda: Imagen + Íconos -->
             <div class="italian-left">
-                <h2 class="italian-title">
-                    <span class="italian-highlight">ITALIAN</span> Revolution
-                </h2>
-                <h3 class="italian-subtitle">
-                    NUEVAS INCORPORACIONES A LA GAMA DE TURISMOS Y VEHÍCULOS COMERCIALES
-                </h3>
+                <img src="{{ asset('main/images/italianrevolution.png') }}"
+                     alt="Italian Revolution"
+                     class="italian-image">
 
-                <!-- Lista con íconos al lado del texto (más grandes) -->
                 <ul class="italian-features">
                     <li>
                         <img src="{{ asset('main/images/cambio-manual.png') }}" alt="Cambio Manual" class="feature-icon">
@@ -129,7 +124,7 @@
                     </li>
                     <li>
                         <img src="{{ asset('main/images/motor.png') }}" alt="Motores 1ST" class="feature-icon">
-                        <strong>Motores 1ST</strong>
+                        <strong>Motores 1.5T</strong>
                     </li>
                     <li>
                         <img src="{{ asset('main/images/diseno-inteligente.png') }}" alt="Diseño Inteligente" class="feature-icon">
@@ -138,8 +133,11 @@
                 </ul>
             </div>
 
-            <!-- Columna Derecha: Textos y Botón -->
+            <!-- Columna Derecha: Texto + Botón -->
             <div class="italian-right">
+                <h3 class="italian-subtitle">
+                    NUEVAS INCORPORACIONES A LA GAMA DE TURISMOS Y VEHÍCULOS COMERCIALES
+                </h3>
                 <p class="italian-desc">
                     Descubre los nuevos vehículos industriales de Shineray. Solicita una prueba de vehículo
                 </p>
@@ -152,6 +150,7 @@
             </div>
         </div>
     </section>
+
 
 
     <!-- AOS JS y otros scripts -->

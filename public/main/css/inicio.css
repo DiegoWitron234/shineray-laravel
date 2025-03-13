@@ -1,124 +1,117 @@
 
-/* Tamaño reducido para imágenes de vehículos */
+/*
+   Estilos generales
+*/
+
+/* Imágenes de vehículos pequeñas */
 .img-small {
-  max-width: 300px;
-  margin: 0 auto;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
 /* Efecto hover para imágenes */
 .hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .hover-lift:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Ajustes para featurettes */
+/* Divider para secciones (Opiniones) */
 .featurette-divider {
     margin: 3rem 0;
 }
 
-/* Estilos para las opiniones en featurettes */
+/* Encabezado en featurettes */
 .featurette-heading {
     font-size: 2rem;
     margin-top: 0;
 }
 
+/* Texto secundario */
 .text-body-secondary {
     font-size: 1.2rem;
     color: #6c757d;
 }
 
-
-/* Sección Italian Revolution - Mejorada */
+/*
+   Sección Italian Revolution
+*/
 .italian-revolution {
     background: url('../images/italian-revolution-bg.png') center/cover no-repeat;
     color: #fff;
-    padding: 120px 20px;    /* Aumenta el padding vertical para mayor altura */
+    padding: 120px 20px;   /* Espacio vertical */
     position: relative;
     z-index: 1;
-    min-height: 500px;      /* Asegura una altura mínima para mostrar bien el fondo */
+    min-height: 500px;     /* Altura mínima para mostrar bien el fondo */
 }
 
-/* Contenedor interno para centrar y limitar el ancho */
 .italian-revolution-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    padding: 30px;
+    justify-content: space-between; /* Columnas separadas */
+    align-items: flex-start;        /* Alinea elementos arriba */
     gap: 40px;
 }
 
-/* Responsive: apilar columnas en móviles */
-@media (max-width: 768px) {
-    .italian-revolution-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .italian-left, .italian-right {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* Columna Izquierda: Íconos y Títulos */
+/* Columna Izquierda (Imagen + Íconos) */
 .italian-left {
     flex: 1;
 }
 
-/* Columna Derecha: Textos y Botón */
+/* Columna Derecha (Textos + Botón) */
 .italian-right {
     flex: 1;
     display: flex;
-    flex-direction: column;     /* Para apilar textos y botón verticalmente */
-    justify-content: center;    /* Centra verticalmente el contenido */
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* Título principal */
-.italian-title {
-    font-size: 2.5rem;
-    margin-bottom: 0.5em;
+/* Imagen "Italian Revolution" */
+.italian-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0; /* Sin centrado automático */
 }
 
-/* Palabra "ITALIAN" en rojo */
-.italian-highlight {
-    color: red;
-}
 
 /* Subtítulo principal */
 .italian-subtitle {
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: bold;
     margin-bottom: 1em;
 }
 
-/* Lista de características (íconos y texto) */
+/* Lista de características (íconos) */
 .italian-features {
     list-style: none;
-    padding: 0;
     margin: 0;
 }
 .italian-features li {
     display: flex;
     align-items: center;
-    margin: 0.8em 0;         /* Un poco más de espacio vertical */
-    font-size: 1rem;
-}
-.feature-icon {
-    width: 40px;             /* Íconos más grandes */
-    margin-right: 10px;
+    margin: 1.2em 0;    /* Aumenta el espacio vertical entre cada ítem */
+    font-size: 1.1rem;  /* Opcional: agranda un poco la fuente */
 }
 
-/* Textos descriptivos */
+.feature-icon {
+    width: 65px;        /* Íconos más grandes */
+    margin-right: 15px; /* Aumenta la separación horizontal entre ícono y texto */
+}
+
+
+/* Texto descriptivo */
 .italian-desc {
     font-size: 1rem;
     margin-bottom: 1em;
 }
 
-/* Botón */
+/* Botón principal */
 .btn-shineray {
     display: inline-block;
     background: red;
@@ -140,10 +133,16 @@
     margin-bottom: 0.5em;
 }
 
-.italian-image {
-    max-width: 400px;  /* Ajusta este valor según lo que consideres "promedio" */
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/*
+   Responsividad (pantallas pequeñas)
+*/
+@media (max-width: 768px) {
+    .italian-revolution-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .italian-left, .italian-right {
+        width: 100%;
+        text-align: center;
+    }
 }
