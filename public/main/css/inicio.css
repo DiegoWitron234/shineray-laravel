@@ -180,3 +180,63 @@
     max-width: 600px;
 }
 
+/* Div flotante de WhatsApp */
+
+.div-flotante{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    z-index: 91;
+    color: #000;
+}
+.icono-flotante{
+    display: block;
+    border-radius: 50%;
+    box-shadow: 1px 2px 5px rgb(100 99 99 / 65%);
+    position: relative;
+    line-height: 0;
+    animation: pulse-wsp 1.5s infinite;
+}
+.icono-flotante img{
+    width: 50px;
+}
+@-webkit-keyframes pulse-wsp{
+    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
+    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
+    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+@-ms-keyframes pulse-wsp{
+    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
+    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
+    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+@-moz-keyframes pulse-wsp{
+    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
+    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
+    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+@keyframes pulse-wsp{
+    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
+    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
+    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+@-webkit-keyframes cs_tittles {
+    2.0833333333333335%{ opacity: 0; -webkit-transform: translateX(-100%);}
+    25.41666666666667%  { opacity: 1; -webkit-transition: .2s opacity .0s ease, .2s -webkit-transform .2s ease; -webkit-transform: translateY(0);}
+    95%,100%    {  -webkit-transform: translateY(0);opacity: 1; }
+}
+@-moz-keyframes cs_tittles {
+    2.0833333333333335%{ opacity: 0; -moz-transform: translateX(-100%);}
+    25.41666666666667%  { opacity: 1; -moz-transition: .2s opacity .0s ease, .2s -moz-transform .2s ease; -moz-transform: translateY(0);}
+    95%,100%    {  -moz-transform: translateY(0);opacity: 1; }
+}
+@-o-keyframes cs_tittles {
+    2.0833333333333335%{ opacity: 0; -o-transform: translateX(-100%);}
+    25.41666666666667%  { opacity: 1; -o-transition: .2s opacity .0s ease, .2s -o-transform .2s ease; -o-transform: translateY(0);}
+    95%,100%    {  -o-transform: translateY(0);opacity: 1; }
+}
+@keyframes cs_tittles {
+    2.0833333333333335%{ opacity: 0; transform: translateX(-100%);}
+    25.41666666666667%  { opacity: 1; transition: .2s opacity .0s ease, .2s transform .2s ease; transform: translateY(0);}
+    95%,100%    {  transform: translateY(0);opacity: 1; }
+}
