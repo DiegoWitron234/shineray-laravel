@@ -85,27 +85,27 @@
             <h2 class="text-center text-primary mb-5">Nuestros Valores</h2>
             <div class="row">
                 <div class="col-md-4 text-center" data-aos="zoom-in">
-                    <img src="https://piaggiomx.com/images/valores/d9e03b64926cf2df14781f0e8ebb714c.webp" alt="Compromiso" class="img-fluid mb-2 shadow">
+                    <img src="{{ asset('main/images/valores/compromiso.png') }}" alt="Compromiso" class="img-fluid mb-2 shadow">
                     <h4>Compromiso</h4>
                     <p>Estamos seguros de que nuestras colaboraciones se basan en la responsabilidad mutua.</p>
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://piaggiomx.com/images/valores/d9a056228a18d9b2b514f4c9ff04a503.webp" alt="Honestidad" class="img-fluid mb-2 shadow">
+                    <img src="{{ asset('main/images/valores/honestidad.png') }}" alt="Honestidad" class="img-fluid mb-2 shadow">
                     <h4>Honestidad</h4>
                     <p>Fomentamos la armonía y confianza con nuestras prácticas comerciales.</p>
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://piaggiomx.com/images/valores/d2401e6f47b84b840a6df67ead8ecc19.webp" alt="Pasión" class="img-fluid mb-2 shadow">
+                    <img src="{{ asset('main/images/valores/pasion.png') }}" alt="Pasión" class="img-fluid mb-2 shadow">
                     <h4>Pasión</h4>
                     <p>Nos dedicamos a mejorar la calidad de vida de las personas con nuestra oferta.</p>
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://piaggiomx.com/images/valores/37127e448bfef5eef0d2f5679318580e.webp" alt="Solidaridad" class="img-fluid mb-2 shadow">
+                    <img src="{{ asset('main/images/valores/solidaridad.png') }}" alt="Solidaridad" class="img-fluid mb-2 shadow">
                     <h4>Solidaridad</h4>
                     <p>Un sentimiento de apoyo especialmente cuando haya una situación de vulnerabilidad.</p>
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://piaggiomx.com/images/valores/3bff2595b3a1ae986a7d58d9cb234de3.webp" alt="Competitividad" class="img-fluid mb-2 shadow">
+                    <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Competitividad" class="img-fluid mb-2 shadow">
                     <h4>Competitividad</h4>
                     <p>Siempre buscamos estar a la vanguardia, ofreciendo los mejores estándares de calidad.</p>
                 </div>

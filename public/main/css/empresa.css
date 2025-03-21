@@ -2,7 +2,9 @@
 
 /* Ejemplo: efecto hover para imágenes de valores */
 #valores img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 120px; /* Tamaño de los íconos */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #valores img:hover {

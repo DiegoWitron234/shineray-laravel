@@ -50,12 +50,14 @@ class BannerResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('titulo')->limit(30),
-                Tables\Columns\TextColumn::make('link')->limit(30),
+                Tables\Columns\TextColumn::make('titulo')
+                    ->limit(30),
+                Tables\Columns\TextColumn::make('link')
+                    ->limit(30),
                 Tables\Columns\TextColumn::make('orden'),
                 Tables\Columns\ImageColumn::make('imagen')
                     ->label('Imagen')
-                    ->disk('public')
+                    ->disk('banners_public')
                     ->height(50),
             ])
             ->filters([
@@ -63,6 +65,8 @@ class BannerResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                // Agregas esta línea para que aparezca el botón Eliminar
+                \Filament\Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

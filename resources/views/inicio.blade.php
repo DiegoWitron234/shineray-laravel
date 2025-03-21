@@ -73,7 +73,7 @@
 
                 <!-- Flecha Izquierda -->
                 <button type="button" class="arrow-button left-arrow" id="prevTab">
-                    <img src="{{ asset('main/images/FlechaIz.png') }}" alt="Anterior" class="arrow-img">
+                    <img src="{{ asset('main/images/flechaIz.png') }}" alt="Anterior" class="arrow-img">
                 </button>
 
                 <!-- Contenido de Tabs (imagen y botones) -->
@@ -108,7 +108,7 @@
 
                 <!-- Flecha Derecha -->
                 <button type="button" class="arrow-button right-arrow" id="nextTab">
-                    <img src="{{ asset('main/images/FlechaDe.png') }}" alt="Siguiente" class="arrow-img">
+                    <img src="{{ asset('main/images/flechaDe.png') }}" alt="Siguiente" class="arrow-img">
                 </button>
 
             </div>

@@ -1,5 +1,5 @@
 
-    document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = [...document.querySelectorAll('#modelTabs button[data-bs-toggle="tab"]')];
     const prevBtn = document.getElementById('prevTab');
     const nextBtn = document.getElementById('nextTab');
