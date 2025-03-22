@@ -1,24 +1,27 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-    const tabButtons = [...document.querySelectorAll('#modelTabs button[data-bs-toggle="tab"]')];
+    document.addEventListener('DOMContentLoaded', function () {
+    const tabs = [...document.querySelectorAll('#modelTabs .nav-link')];
     const prevBtn = document.getElementById('prevTab');
     const nextBtn = document.getElementById('nextTab');
 
-    function showTab(index) {
-    if (index >= 0 && index < tabButtons.length) {
-    let tabTrigger = new bootstrap.Tab(tabButtons[index]);
-    tabTrigger.show();
-}
+    function getActiveIndex() {
+    return tabs.findIndex(tab => tab.classList.contains('active'));
 }
 
-    prevBtn.addEventListener('click', function() {
-    let currentIndex = tabButtons.findIndex(btn => btn.classList.contains('active'));
-    showTab(currentIndex - 1);
+    function showTab(index) {
+    tabs[index].click();
+}
+
+    prevBtn.addEventListener('click', () => {
+    let current = getActiveIndex();
+    let prevIndex = (current - 1 + tabs.length) % tabs.length;
+    showTab(prevIndex);
 });
 
-    nextBtn.addEventListener('click', function() {
-    let currentIndex = tabButtons.findIndex(btn => btn.classList.contains('active'));
-    showTab(currentIndex + 1);
+    nextBtn.addEventListener('click', () => {
+    let current = getActiveIndex();
+    let nextIndex = (current + 1) % tabs.length;
+    showTab(nextIndex);
 });
 });
 

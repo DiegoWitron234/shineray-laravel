@@ -38,10 +38,7 @@
 
 
     <!-- Sección vehículos -->
-
-    <!-- Contenedor principal -->
-    <div class="container my-4">
-
+    <div class="container-fluid my-4">
         <!-- Fila de Tabs -->
         <div class="row">
             <div class="col-12">
@@ -64,17 +61,12 @@
             </div>
         </div>
 
-        <!-- Separación para que la imagen quede más abajo de los tabs -->
         <div class="mt-4"></div>
 
         <!-- Fila donde irá la imagen y las flechas -->
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10 position-relative text-center">
-
-                <!-- Flecha Izquierda -->
-                <button type="button" class="arrow-button left-arrow" id="prevTab">
-                    <img src="{{ asset('main/images/flechaIz.png') }}" alt="Anterior" class="arrow-img">
-                </button>
+            <!-- Contenedor con position: relative para superponer flechas -->
+            <div class="col-12 position-relative text-center">
 
                 <!-- Contenido de Tabs (imagen y botones) -->
                 <div class="tab-content" id="modelTabsContent">
@@ -83,7 +75,7 @@
                              id="content-{{ $vehiculo->id }}"
                              role="tabpanel"
                              aria-labelledby="tab-{{ $vehiculo->id }}">
-                            <!-- Imagen principal -->
+
                             @if($vehiculo->imagen)
                                 <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}"
                                      alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
@@ -94,21 +86,24 @@
                                      class="img-fluid vehicle-image mx-auto d-block">
                             @endif
 
-                            <!-- Botones Cotizar / Más info -->
                             <div class="d-flex justify-content-center mt-3">
-                                <a href="#" class="btn btn-danger me-3">Cotizar</a>
-                                <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}" class="btn btn-secondary">
-                                    Más información
-                                </a>
+                                <a href="#" class="btn-cotizar" aria-label="Cotizar"></a>
+                                <a href="#" class="btn-info" aria-label="Más información"></a>
                             </div>
-
                         </div>
                     @endforeach
                 </div>
 
+                <!-- Flecha Izquierda -->
+                <button type="button" class="arrow-button left-arrow" id="prevTab">
+                    <img src="{{ asset('main/images/flechaIz.png') }}"
+                         alt="Anterior" class="arrow-img">
+                </button>
+
                 <!-- Flecha Derecha -->
                 <button type="button" class="arrow-button right-arrow" id="nextTab">
-                    <img src="{{ asset('main/images/flechaDe.png') }}" alt="Siguiente" class="arrow-img">
+                    <img src="{{ asset('main/images/flechaDe.png') }}"
+                         alt="Siguiente" class="arrow-img">
                 </button>
 
             </div>

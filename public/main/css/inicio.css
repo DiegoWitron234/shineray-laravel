@@ -155,16 +155,26 @@
     ESTILOS PARA LOS VEHÍCULOS
  */
 
+
+.vehicle-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* Contenedor de las flechas */
 .arrow-button {
     position: absolute;
-    top: 50%;
+    top: 50%;              /* Centra verticalmente */
     transform: translateY(-50%);
     background: transparent;
     border: none;
+    z-index: 10;           /* Para que queden sobre la imagen */
+    cursor: pointer;       /* Que luzca clickable */
 }
 
 .left-arrow {
-    left: 20px;
+    left: 20px;            /* Ajusta según quieras */
 }
 
 .right-arrow {
@@ -172,13 +182,39 @@
 }
 
 .arrow-img {
-    width: 40px;  /* Ajusta a tu gusto */
+    width: 40px;           /* Ajusta tamaño a tu gusto */
     height: auto;
 }
 
-.vehicle-image {
-    max-width: 600px;
+/*
+Botones cotizar y mas info
+ */
+
+.btn-cotizar {
+    display: inline-block;
+    width: 120px;       /* Ajusta según el tamaño de tu imagen */
+    height: 50px;
+    background: url('../images/elementos/btncotizar.png') no-repeat center center;
+    background-size: contain;  /* Ajusta la imagen dentro del botón */
+    border: none;
+    text-indent: -9999px;      /* Oculta texto si hubiera */
+    overflow: hidden;          /* Evita scroll interno */
+    cursor: pointer;
 }
+
+.btn-info {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    background: url('../images/elementos/btnmasinfo.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
 
 /* Div flotante de WhatsApp */
 
