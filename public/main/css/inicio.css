@@ -197,7 +197,7 @@
 
 .tabs-line {
     width: 300px; /* Ajusta la longitud */
-    height: 2px;
+    height: 5px;
     background-color: #c00;
     margin: 0 15px;
 }

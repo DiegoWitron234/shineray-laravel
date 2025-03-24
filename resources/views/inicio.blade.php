@@ -106,13 +106,13 @@
 
                 <!-- Flecha Izquierda -->
                 <button type="button" class="arrow-button left-arrow" id="prevTab">
-                    <img src="{{ asset('main/images/flechaIz.png') }}"
+                    <img src="{{ asset('main/images/elementos/flechaIz.png') }}"
                          alt="Anterior" class="arrow-img">
                 </button>
 
                 <!-- Flecha Derecha -->
                 <button type="button" class="arrow-button right-arrow" id="nextTab">
-                    <img src="{{ asset('main/images/flechaDe.png') }}"
+                    <img src="{{ asset('main/images/elementos/flechaDe.png') }}"
                          alt="Siguiente" class="arrow-img">
                 </button>
 
@@ -136,15 +136,15 @@
 
                 <ul class="italian-features">
                     <li>
-                        <img src="{{ asset('main/images/cambio-manual.png') }}" alt="Cambio Manual" class="feature-icon">
+                        <img src="{{ asset('main/images/elementos/cambio-manual.png') }}" alt="Cambio Manual" class="feature-icon">
                         <strong>Cambio Manual y Automático</strong>
                     </li>
                     <li>
-                        <img src="{{ asset('main/images/motor.png') }}" alt="Motores 1ST" class="feature-icon">
+                        <img src="{{ asset('main/images/elementos/motor.png') }}" alt="Motores 1ST" class="feature-icon">
                         <strong>Motores 1.5T</strong>
                     </li>
                     <li>
-                        <img src="{{ asset('main/images/diseno-inteligente.png') }}" alt="Diseño Inteligente" class="feature-icon">
+                        <img src="{{ asset('main/images/elementos/diseno-inteligente.png') }}" alt="Diseño Inteligente" class="feature-icon">
                         <strong>Diseño Inteligente</strong>
                     </li>
                 </ul>
@@ -170,7 +170,7 @@
 
     <section class="div-flotante">
         <a href="https://wa.me/529932787360?text=Hola, deseo información." target="_blank" class="icono-flotante">
-            <img src="{{ asset('main/images/whatsapp.png') }}" loading="lazy" alt="WhatsApp" class="icono-flotante-img">
+            <img src="{{ asset('main/images/redes-sociales/whatsapp.png') }}" loading="lazy" alt="WhatsApp" class="icono-flotante-img">
         </a>
     </section>
 
