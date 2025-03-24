@@ -49,7 +49,7 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center">
-                    <img src="{{ asset('main/images/fondohistoria.jpg') }}" alt="Historia de Shineray" style="width: 100%; height: auto;">
+                    <img src="{{ asset('main/images/fondos/fondohistoria.jpg') }}" alt="Historia de Shineray" style="width: 100%; height: auto;">
                     <h2 class="text-primary mb-4">Quiénes somos</h2>
                     <p>
                         Moto Galería es una empresa fundada el 11 de Agosto de 2006 por un grupo familiar de Chiapas dedicada a la comercialización de moto carros. En el año 2019 se crean lazos con la marca Piaggio y a raíz de esta unión Moto Galería se convierte en importadora y exportadora de moto carros de pasajeros, pick ups y refacciones. Desde entonces, Moto Galería en conjunto con Piaggio se ha expandido a lugares como Colombia, Guatemala, Perú y Estados Unidos.

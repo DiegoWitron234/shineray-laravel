@@ -122,15 +122,12 @@
 
 
 
-
-
-
     <!-- Sección Italian Revolution -->
     <section class="italian-revolution">
         <div class="italian-revolution-content">
             <!-- Columna Izquierda: Imagen + Íconos -->
             <div class="italian-left">
-                <img src="{{ asset('main/images/italianrevolution.png') }}"
+                <img src="{{ asset('main/images/elementos/italianrevolution.png') }}"
                      alt="Italian Revolution"
                      class="italian-image">
 

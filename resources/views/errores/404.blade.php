@@ -12,7 +12,7 @@
         <div class="error-content">
             <div class="car-road">
                 <!-- Imagen del auto -->
-                <img src="{{ asset('main/images/carro4040.png') }}" alt="Auto perdido" class="car">
+                <img src="{{ asset('main/images/carro404.png') }}" alt="Auto perdido" class="car">
             </div>
             <!-- Título principal (el número 404 o el texto de error) -->
             <h1 class="error-title">404</h1>
