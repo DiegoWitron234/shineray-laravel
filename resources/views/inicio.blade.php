@@ -42,22 +42,32 @@
         <!-- Fila de Tabs -->
         <div class="row">
             <div class="col-12">
-                <ul class="nav nav-tabs justify-content-center" id="modelTabs" role="tablist">
-                    @foreach($vehiculos as $index => $vehiculo)
-                        <li class="nav-item" role="presentation">
-                            <button
-                                class="nav-link {{ $loop->first ? 'active' : '' }}"
-                                id="tab-{{ $vehiculo->id }}"
-                                data-bs-toggle="tab"
-                                data-bs-target="#content-{{ $vehiculo->id }}"
-                                type="button" role="tab"
-                                aria-controls="content-{{ $vehiculo->id }}"
-                                aria-selected="{{ $loop->first ? 'true' : 'false' }}">
-                                {{ $vehiculo->modelo }}
-                            </button>
-                        </li>
-                    @endforeach
-                </ul>
+                <!-- Envolvemos las tabs en .tabs-wrapper -->
+                <div class="tabs-wrapper d-flex align-items-center justify-content-center">
+                    <!-- Línea roja izquierda -->
+                    <div class="tabs-line"></div>
+
+                    <!-- Tus tabs originales -->
+                    <ul class="nav nav-tabs" id="modelTabs" role="tablist">
+                        @foreach($vehiculos as $index => $vehiculo)
+                            <li class="nav-item" role="presentation">
+                                <button
+                                    class="nav-link {{ $loop->first ? 'active' : '' }}"
+                                    id="tab-{{ $vehiculo->id }}"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#content-{{ $vehiculo->id }}"
+                                    type="button" role="tab"
+                                    aria-controls="content-{{ $vehiculo->id }}"
+                                    aria-selected="{{ $loop->first ? 'true' : 'false' }}">
+                                    {{ $vehiculo->modelo }}
+                                </button>
+                            </li>
+                        @endforeach
+                    </ul>
+
+                    <!-- Línea roja derecha -->
+                    <div class="tabs-line"></div>
+                </div>
             </div>
         </div>
 
@@ -88,7 +98,7 @@
 
                             <div class="d-flex justify-content-center mt-3">
                                 <a href="#" class="btn-cotizar" aria-label="Cotizar"></a>
-                                <a href="#" class="btn-info" aria-label="Más información"></a>
+                                <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}" class="btn-info" aria-label="Más información"></a>
                             </div>
                         </div>
                     @endforeach

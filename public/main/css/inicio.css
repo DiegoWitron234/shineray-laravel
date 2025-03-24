@@ -1,9 +1,8 @@
-
 /*
-   Estilos generales
+   SECCIÓN “ITALIAN REVOLUTION” Y OTROS ESTILOS DE LA PÁGINA INICIO
 */
 
-/* Imágenes de vehículos pequeñas */
+/* Imágenes de vehículos pequeñas (si las usas en alguna parte) */
 .img-small {
     max-width: 300px;
     margin: 0 auto;
@@ -18,12 +17,10 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Divider para secciones (Opiniones) */
+/* Divider y encabezados (si los usas) */
 .featurette-divider {
     margin: 3rem 0;
 }
-
-/* Encabezado en featurettes */
 .featurette-heading {
     font-size: 2rem;
     margin-top: 0;
@@ -35,16 +32,14 @@
     color: #6c757d;
 }
 
-/*
-   Sección Italian Revolution
-*/
+/* Sección Italian Revolution */
 .italian-revolution {
     background: url('../images/italian-revolution-bg.png') center/cover no-repeat;
     color: #fff;
-    padding: 120px 20px;   /* Espacio vertical */
+    padding: 120px 20px;
     position: relative;
     z-index: 1;
-    min-height: 500px;     /* Altura mínima para mostrar bien el fondo */
+    min-height: 500px;
 }
 
 .italian-revolution-content {
@@ -52,42 +47,35 @@
     margin: 0 auto;
     display: flex;
     padding: 30px;
-    justify-content: space-between; /* Columnas separadas */
-    align-items: flex-start;        /* Alinea elementos arriba */
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 40px;
 }
 
-/* Columna Izquierda (Imagen + Íconos) */
-.italian-left {
+.italian-left, .italian-right {
     flex: 1;
 }
 
-/* Columna Derecha (Textos + Botón) */
 .italian-right {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* Imagen "Italian Revolution" */
 .italian-image {
     max-width: 400px;
     width: 100%;
     height: auto;
     display: block;
-    margin: 0; /* Sin centrado automático */
+    margin: 0;
 }
 
-
-/* Subtítulo principal */
 .italian-subtitle {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1em;
 }
 
-/* Lista de características (íconos) */
 .italian-features {
     list-style: none;
     margin: 0;
@@ -95,28 +83,24 @@
 .italian-features li {
     display: flex;
     align-items: center;
-    margin: 1.2em 0;    /* Aumenta el espacio vertical entre cada ítem */
-    font-size: 1.1rem;  /* Opcional: agranda un poco la fuente */
+    margin: 1.2em 0;
+    font-size: 1.1rem;
 }
-
 .feature-icon {
-    width: 65px;        /* Íconos más grandes */
-    margin-right: 15px; /* Aumenta la separación horizontal entre ícono y texto */
+    width: 65px;
+    margin-right: 15px;
 }
 
-
-/* Texto descriptivo */
 .italian-desc {
     font-size: 1rem;
     margin-bottom: 1em;
 }
 
-/* Botón principal */
 .btn-shineray {
     display: inline-block;
     background: red;
-    color: #FFFFFFFF;
-    align-self: flex-start; /* Evita que se expanda en el contenedor flex */
+    color: #fff;
+    align-self: flex-start;
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -124,21 +108,16 @@
     margin-bottom: 1em;
     transition: background 0.3s ease;
 }
-
-
 .btn-shineray:hover {
     background: #c00;
 }
 
-/* Subtítulo secundario */
 .italian-subtitle2 {
     font-size: 1.3rem;
     margin-bottom: 0.5em;
 }
 
-/*
-   Responsividad (pantallas pequeñas)
-*/
+/* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
     .italian-revolution-content {
         flex-direction: column;
@@ -150,73 +129,82 @@
     }
 }
 
-
 /*
-    ESTILOS PARA LOS VEHÍCULOS
- */
+   SECCIÓN DE VEHÍCULOS (TABS + FLECHAS + BOTONES)
+*/
 
-
+/* Imagen del vehículo a ancho completo */
 .vehicle-image {
     width: 100% !important;
     max-width: 100% !important;
     height: auto;
 }
 
-/* Contenedor de las flechas */
+/* Flechas sobre la imagen */
 .arrow-button {
     position: absolute;
-    top: 50%;              /* Centra verticalmente */
+    top: 50%;
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    z-index: 10;           /* Para que queden sobre la imagen */
-    cursor: pointer;       /* Que luzca clickable */
+    z-index: 10;
+    cursor: pointer;
 }
-
 .left-arrow {
-    left: 20px;            /* Ajusta según quieras */
+    left: 20px;
 }
-
 .right-arrow {
     right: 20px;
 }
-
 .arrow-img {
-    width: 40px;           /* Ajusta tamaño a tu gusto */
+    width: 40px;
     height: auto;
 }
 
-/*
-Botones cotizar y mas info
- */
-
-.btn-cotizar {
-    display: inline-block;
-    width: 120px;       /* Ajusta según el tamaño de tu imagen */
-    height: 50px;
-    background: url('../images/elementos/btncotizar.png') no-repeat center center;
-    background-size: contain;  /* Ajusta la imagen dentro del botón */
-    border: none;
-    text-indent: -9999px;      /* Oculta texto si hubiera */
-    overflow: hidden;          /* Evita scroll interno */
-    cursor: pointer;
-}
-
+/* Botones Cotizar / Más info (imagen de fondo) */
+.btn-cotizar,
 .btn-info {
     display: inline-block;
-    width: 120px;
+    width: 180px;
     height: 50px;
-    background: url('../images/elementos/btnmasinfo.png') no-repeat center center;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
     border: none;
     text-indent: -9999px;
     overflow: hidden;
     cursor: pointer;
+    margin: 50px;
 }
 
+.btn-cotizar {
+    background-image: url('../images/elementos/btncotizar.png');
+}
+.btn-info {
+    background-image: url('../images/elementos/btnmasinfo.png');
+}
 
+/*
+   LÍNEAS ROJAS A LOS LADOS DE LAS TABS
+   (usando el contenedor .tabs-wrapper y .tabs-line)
+*/
+.tabs-wrapper {
+    margin: 1rem 0; /* Espacio vertical opcional */
+    /* display, justify-content y align-items se aplican en tu vista con
+       d-flex align-items-center justify-content-center
+       o puedes ponerlos aquí si prefieres. */
+}
 
-/* Div flotante de WhatsApp */
+.tabs-line {
+    width: 300px; /* Ajusta la longitud */
+    height: 2px;
+    background-color: #c00;
+    margin: 0 15px;
+}
+
+/*
+   BOTÓN FLOTANTE DE WHATSAPP
+*/
 
 .div-flotante{
     position: fixed;
@@ -236,43 +224,14 @@ Botones cotizar y mas info
 .icono-flotante img{
     width: 50px;
 }
-@-webkit-keyframes pulse-wsp{
-    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
-    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
-    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+/* Animación pulso WhatsApp */
+@-webkit-keyframes pulse-wsp {
+    0% { transform: scale(0.95); box-shadow:0 0 0 0 rgba(255,255,255,0.7);}
+    70% { transform: scale(1); box-shadow:0 0 0 10px rgba(255,255,255,0);}
+    100% { transform: scale(0.95); box-shadow:0 0 0 0 rgba(255,255,255,0);}
 }
-@-ms-keyframes pulse-wsp{
-    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
-    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
-    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
-}
-@-moz-keyframes pulse-wsp{
-    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
-    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
-    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
-}
-@keyframes pulse-wsp{
-    0%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0.7)}
-    70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
-    100%{transform:scale(0.95);box-shadow:0 0 0 0 rgba(255,255,255,0)}
-}
-@-webkit-keyframes cs_tittles {
-    2.0833333333333335%{ opacity: 0; -webkit-transform: translateX(-100%);}
-    25.41666666666667%  { opacity: 1; -webkit-transition: .2s opacity .0s ease, .2s -webkit-transform .2s ease; -webkit-transform: translateY(0);}
-    95%,100%    {  -webkit-transform: translateY(0);opacity: 1; }
-}
-@-moz-keyframes cs_tittles {
-    2.0833333333333335%{ opacity: 0; -moz-transform: translateX(-100%);}
-    25.41666666666667%  { opacity: 1; -moz-transition: .2s opacity .0s ease, .2s -moz-transform .2s ease; -moz-transform: translateY(0);}
-    95%,100%    {  -moz-transform: translateY(0);opacity: 1; }
-}
-@-o-keyframes cs_tittles {
-    2.0833333333333335%{ opacity: 0; -o-transform: translateX(-100%);}
-    25.41666666666667%  { opacity: 1; -o-transition: .2s opacity .0s ease, .2s -o-transform .2s ease; -o-transform: translateY(0);}
-    95%,100%    {  -o-transform: translateY(0);opacity: 1; }
-}
-@keyframes cs_tittles {
-    2.0833333333333335%{ opacity: 0; transform: translateX(-100%);}
-    25.41666666666667%  { opacity: 1; transition: .2s opacity .0s ease, .2s transform .2s ease; transform: translateY(0);}
-    95%,100%    {  transform: translateY(0);opacity: 1; }
+@keyframes pulse-wsp {
+    0% { transform: scale(0.95); box-shadow:0 0 0 0 rgba(255,255,255,0.7);}
+    70% { transform: scale(1); box-shadow:0 0 0 10px rgba(255,255,255,0);}
+    100% { transform: scale(0.95); box-shadow:0 0 0 0 rgba(255,255,255,0);}
 }
