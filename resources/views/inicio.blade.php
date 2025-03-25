@@ -12,6 +12,8 @@
 
 @section('content')
 
+    @include('partials.cotizacion-partial')
+
     <!-- Carousel Principal -->
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
         <div class="carousel-indicators">
@@ -97,8 +99,20 @@
                             @endif
 
                             <div class="d-flex justify-content-center mt-3">
-                                <a href="#" class="btn-cotizar" aria-label="Cotizar"></a>
-                                <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}" class="btn-info" aria-label="Más información"></a>
+                                <!-- Botón con data-modelo -->
+                                <a href="#"
+                                   class="btn-cotizar"
+                                   data-modelo="{{ $vehiculo->modelo }}"
+                                   aria-label="Cotizar">
+                                    Cotizar
+                                </a>
+
+                                <!-- Botón "Más información" -->
+                                <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
+                                   class="btn-info"
+                                   aria-label="Más información">
+                                    Más información
+                                </a>
                             </div>
                         </div>
                     @endforeach

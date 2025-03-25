@@ -56,8 +56,18 @@
 </header>
 
 <main>
+    @if (session('status'))
+        <div class="container mt-5">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('status') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+            </div>
+        </div>
+    @endif
+
     @yield('content')
 </main>
+
 
 
 
@@ -102,6 +112,9 @@
 
 <!-- Bootstrap JS Bundle (incluye Popper) -->
 <script src="{{ asset('main/js/bootstrap.bundle.min.js') }}"></script>
+
+<!-- Scripts generales -->
+<script src="{{ asset('main/js/main.js') }}"></script>
 
 <!-- Script para el botón "TOP" -->
 <script>
