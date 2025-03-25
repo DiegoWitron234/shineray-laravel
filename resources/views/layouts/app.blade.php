@@ -82,16 +82,16 @@
             </div>
             <div class="col-md-6 text-md-end mt-3 mt-md-0">
                 <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/facebook.png') }}" alt="Facebook">
+                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/FBW.png') }}" alt="Facebook">
                 </a>
                 <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/instagram.png') }}" alt="Instagram">
+                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/INW.png') }}" alt="Instagram">
                 </a>
                 <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/youtube.png') }}" alt="YouTube">
+                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/YTW.png') }}" alt="YouTube">
                 </a>
                 <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/tiktok.png') }}" alt="TikTok">
+                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/TTKW.png') }}" alt="TikTok">
                 </a>
             </div>
         </div>

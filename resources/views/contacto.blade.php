@@ -25,16 +25,16 @@
                     <p>MANTENERSE EN CONTACTO</p>
                     <div class="social-icons">
                         <a href="#" class="contact-networks-icon">
-                            <img src="{{ asset('main/images/facebook.png') }}" alt="Facebook">
+                            <img src="{{ asset('main/images/redes-sociales/facebook.png') }}" alt="Facebook">
                         </a>
                         <a href="#" class="contact-networks-icon">
-                            <img src="{{ asset('main/images/instagram.png') }}" alt="Instagram">
+                            <img src="{{ asset('main/images/redes-sociales/instagram.png') }}" alt="Instagram">
                         </a>
                         <a href="#" class="contact-networks-icon">
-                            <img src="{{ asset('main/images/youtube.png') }}" alt="YouTube">
+                            <img src="{{ asset('main/images/redes-sociales/youtube.png') }}" alt="YouTube">
                         </a>
                         <a href="#" class="contact-networks-icon">
-                            <img src="{{ asset('main/images/tiktok.png') }}" alt="TikTok">
+                            <img src="{{ asset('main/images/redes-sociales/tiktok.png') }}" alt="TikTok">
                         </a>
                     </div>
                 </div>

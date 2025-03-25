@@ -12,7 +12,7 @@
 @section('content')
     <!-- Imagen Encabezado -->
     <section class="single-page-header">
-        <img src="{{ asset('main/images/fondohistoria.jpg') }}" alt="Historia de la Empresa" class="img-fluid w-100">
+        <img src="{{ asset('main/images/fondos/fondohistoria.jpg') }}" alt="Historia de la Empresa" class="img-fluid w-100">
     </section>
 
     <!-- Texto debajo de la imagen -->
