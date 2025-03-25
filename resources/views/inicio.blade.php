@@ -155,11 +155,14 @@
                 <p class="italian-desc">
                     Descubre los nuevos vehículos industriales de Shineray. Solicita una prueba de vehículo
                 </p>
+                <p class="italian-prueba">
+                    Solicita una prueba de vehículo
+                </p>
                 <a href="#" class="btn-shineray">QUIERO PROBAR UN Shineray</a>
 
                 <h4 class="italian-subtitle2">PRUÉBALOS Y SORPRÉNDETE</h4>
                 <p class="italian-desc">
-                    ¡Con 5 y 8 años de garantía! Diseño, inteligencia y alma italiana
+                    ¡Con 3 años de garantía! Diseño, inteligencia y alma italiana
                 </p>
             </div>
         </div>

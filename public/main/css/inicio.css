@@ -96,21 +96,25 @@
     margin-bottom: 1em;
 }
 
+.italian-prueba {
+    font-size: 1rem;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
 .btn-shineray {
     display: inline-block;
-    background: red;
-    color: #fff;
-    align-self: flex-start;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-bottom: 1em;
+    background: url('../images/elementos/btnprobarunshineray.png') no-repeat center center;
+    background-size: contain;
+    width: 210px;   /* Ajustar el ancho */
+    height: 27px;   /* Ajustar la altura */
+    border: none;
+    text-indent: -9999px;  /* Oculta el texto */
+    overflow: hidden;
     transition: background 0.3s ease;
+    margin: 1em auto;
 }
-.btn-shineray:hover {
-    background: #c00;
-}
+
 
 .italian-subtitle2 {
     font-size: 1.3rem;
