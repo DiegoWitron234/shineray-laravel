@@ -88,7 +88,7 @@
         <!-- Fila inferior: derechos de autor y redes sociales -->
         <div class="row mt-3 align-items-center">
             <div class="col-md-6">
-                <p class="mb-0 text-white-50">DERECHOS DE AUTOR © 2012 - 2025 SHINERAY HOLDING GROUP COMPANY</p>
+                <p class="mb-0 text-white-50">DERECHOS DE AUTOR © 2012 - 2025 Moto Galería</p>
             </div>
             <div class="col-md-6 text-md-end mt-3 mt-md-0">
                 <a href="#" class="social-icon">
