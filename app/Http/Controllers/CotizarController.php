@@ -18,7 +18,7 @@ class CotizarController extends Controller
             'correo' => 'required|email',
             'telefono' => 'required',
             'aviso_privacidad' => 'required',
-            'modelo_vehiculo' => 'nullable' // o required, depende si siempre lo mandas
+            'modelo_vehiculo' => 'nullable'
         ]);
 
         // Tomar el modelo (si se envió)

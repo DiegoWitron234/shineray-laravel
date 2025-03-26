@@ -44,6 +44,10 @@ class VehiculoResource extends Resource
                     ->image()
                     ->disk('vehiculos_public')
                     ->directory(''),
+                Forms\Components\FileUpload::make('detalles')
+                    ->image()
+                    ->disk('vehiculos_public')
+                    ->directory(''),
                 Forms\Components\TextInput::make('carga')
                     ->numeric()
                     ->required(),

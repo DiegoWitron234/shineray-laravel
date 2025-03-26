@@ -16,6 +16,7 @@ class Vehiculo extends Model
         'descripcion',
         'imagen',    // Imagen para la página "Inicio"
         'catalogo',  // Nueva imagen para la página "Vehículos"
+        'detalles',  // Imagen con los datos del vehiculo
         'carga',
         'motor',
         'rendimiento'

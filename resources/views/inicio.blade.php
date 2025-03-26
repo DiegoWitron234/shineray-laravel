@@ -110,8 +110,8 @@
                                 <!-- Botón "Más información" -->
                                 <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
                                    class="btn-info"
-                                   aria-label="Más información">
-                                    Más información
+                                   aria-label="Ver catalogo">
+                                    Ver catálogo
                                 </a>
                             </div>
                         </div>
