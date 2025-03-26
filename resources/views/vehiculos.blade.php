@@ -3,13 +3,13 @@
 @section('title', 'Vehículos - Shineray')
 
 @section('extra_head')
-    <!-- Estilos exclusivos para la página de Vehículos (opcional) -->
-    <!-- <link rel="stylesheet" href="{{ asset('main/css/vehiculos.css') }}"> -->
+
     <!-- AOS CSS para animaciones -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-    <!-- Incluye estilos de Bootstrap si no los tienes en tu layout -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <!-- Estilos exclusivos para la página de Vehículos -->
+    <link rel="stylesheet" href="{{ asset('main/css/vehiculos.css') }}">
+
 @endsection
 
 @section('content')
@@ -68,12 +68,12 @@
                                     <!-- Botones Cotizar / Ver Catálogo (centrados) -->
                                     <div class="mt-4">
                                         <a href="#"
-                                           class="btn btn-danger me-3 btn-cotizar"
+                                           class="me-3 btn-cotizar"
                                            data-modelo="{{ $vehiculo->modelo }}">
                                             Cotizar</a>
 
                                         <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
-                                           class="btn btn-outline-danger btn-info"
+                                           class="btn-info"
                                            style="min-width: 150px;">
                                             Ver Catálogo
                                         </a>
@@ -86,21 +86,24 @@
 
             </div>
 
-            <!-- Flecha izquierda de Bootstrap -->
+            <!-- Flecha izquierda personalizada -->
             <button class="carousel-control-prev" type="button"
-                    data-bs-target="#vehiculosCarousel" data-bs-slide="prev"
-                    style="filter: invert(31%) sepia(83%) saturate(7490%) hue-rotate(1deg) brightness(94%) contrast(121%);">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    data-bs-target="#vehiculosCarousel" data-bs-slide="prev">
+                <img src="{{ asset('main/images/elementos/flechaIz.png') }}"
+                     alt="Anterior"
+                     class="custom-arrow">
                 <span class="visually-hidden">Anterior</span>
             </button>
 
-            <!-- Flecha derecha de Bootstrap -->
+            <!-- Flecha derecha personalizada -->
             <button class="carousel-control-next" type="button"
-                    data-bs-target="#vehiculosCarousel" data-bs-slide="next"
-                    style="filter: invert(31%) sepia(83%) saturate(7490%) hue-rotate(1deg) brightness(94%) contrast(121%);">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    data-bs-target="#vehiculosCarousel" data-bs-slide="next">
+                <img src="{{ asset('main/images/elementos/flechaDe.png') }}"
+                     alt="Siguiente"
+                     class="custom-arrow">
                 <span class="visually-hidden">Siguiente</span>
             </button>
+
         </div>
     @else
         <div class="container">
