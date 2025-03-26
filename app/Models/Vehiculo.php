@@ -9,5 +9,15 @@ class Vehiculo extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['tipo', 'modelo', 'precio', 'descripcion', 'imagen', 'descripcion', 'carga', 'motor', 'rendimiento'];
+    protected $fillable = [
+        'tipo',
+        'modelo',
+        'precio',
+        'descripcion',
+        'imagen',    // Imagen para la página "Inicio"
+        'catalogo',  // Nueva imagen para la página "Vehículos"
+        'carga',
+        'motor',
+        'rendimiento'
+    ];
 }

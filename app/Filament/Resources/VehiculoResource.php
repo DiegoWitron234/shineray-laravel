@@ -17,7 +17,7 @@ class VehiculoResource extends Resource
 {
     protected static ?string $model = Vehiculo::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-truck';
 
     public static function form(Form $form): Form
     {
@@ -39,6 +39,11 @@ class VehiculoResource extends Resource
                     ->image()
                     ->disk('vehiculos_public')
                     ->directory(''),
+                // Nuevo campo para la imagen de catálogo
+                Forms\Components\FileUpload::make('catalogo')
+                    ->image()
+                    ->disk('vehiculos_public')
+                    ->directory(''),
                 Forms\Components\TextInput::make('carga')
                     ->numeric()
                     ->required(),
@@ -50,6 +55,7 @@ class VehiculoResource extends Resource
                     ->required(),
             ]);
     }
+
 
     public static function table(Table $table): Table
     {
