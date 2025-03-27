@@ -1,7 +1,7 @@
 /* Sección hero con imagen de fondo */
 .hero-section {
     position: relative;
-    background: url('../images/fondos/fondohistoria.jpg') center/cover no-repeat;
+    background: url('../images/headers/header.jpg') center/cover no-repeat;
     height: 300px;
     display: flex;
     justify-content: center;

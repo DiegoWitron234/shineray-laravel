@@ -77,7 +77,7 @@
         <!-- Fila superior: logotipos y enlaces legales -->
         <div class="row align-items-center">
             <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
-                <img src="{{ asset('main/images/logoshineray.png') }}" alt="Shineray Logo" class="me-3 footer-logo">
+                <img src="{{ asset('main/images/elementos/logoshinerayblanco.png') }}" alt="Shineray Logo" class="me-3 footer-logo">
                 <!-- Puedes incluir otro logotipo si es necesario -->
             </div>
             <div class="col-md-6 text-md-end">

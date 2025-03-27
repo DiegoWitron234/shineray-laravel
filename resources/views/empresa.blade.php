@@ -12,7 +12,7 @@
 @section('content')
     <!-- Imagen Encabezado -->
     <section class="single-page-header">
-        <img src="{{ asset('main/images/fondos/fondohistoria.jpg') }}" alt="Historia de la Empresa" class="img-fluid w-100">
+        <img src="{{ asset('main/images/headers/header.jpg') }}" alt="Historia de la Empresa" class="img-fluid w-100">
     </section>
 
     <!-- Texto debajo de la imagen -->
@@ -28,17 +28,17 @@
         <div class="container py-5">
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right">
-                    <h2 class="text-primary mb-4">Historia</h2>
+                    <h2 class="text-primary mb-4">Acerca de Shineray</h2>
                     <div id="historia-contenedor" class="historia-contenedor">
                         <p>
-                            Fundada en 1997, <strong>Shineray Group</strong> es una empresa dedicada a la investigación, desarrollo, producción y venta de automóviles, así como a motocicletas de alta gama, maquinaria agrícola, movilidad inteligente y arrendamiento financiero con sede en Chongqing, China.
+                            <strong>Shineray</strong> es una marca que se destaca por su innovación y compromiso con la calidad en el diseño y fabricación de vehículos y soluciones de movilidad. Con un enfoque en ofrecer productos de alto rendimiento, Shineray ha logrado consolidar una imagen internacional, proporcionando motocicletas y soluciones de transporte que combinan tecnología avanzada con una estética moderna. La marca se orienta hacia el desarrollo de productos versátiles y eficientes, pensados para satisfacer las necesidades del usuario contemporáneo.
                         </p>
                     </div>
                     <!-- Botón para "Leer más", en caso de que lo necesites -->
                     <button id="btn-leer-mas" class="btn btn-primary">Leer más</button>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
-                    <img src="{{ asset('main/images/carroemergencia2.jpeg') }}" alt="Historia de la empresa" class="img-fluid rounded shadow">
+                    <img src="{{ asset('main/images/elementos/camioneta.jpeg') }}" alt="Historia de la empresa" class="img-fluid rounded shadow">
                 </div>
             </div>
         </div>

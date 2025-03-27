@@ -20,13 +20,13 @@
         <div class="distribuidor-info">
             <h2 class="title">Distribuidores</h2>
             <p>
-                Al ser distribuidor de PIAGGIO, formarás parte de la marca creadora de los mototaxis mejor posicionados en el mercado a nivel mundial.
+                Al ser distribuidor de SHINERAY, formarás parte de una marca líder en la creación de vehículos de alto rendimiento, reconocida por su innovación y calidad a nivel mundial.
             </p>
             <p>
-                La inversión inicial tiene una recuperación más rápida que la competencia. Recibes capacitación y asesoría permanente que te ayudarán a asegurar el crecimiento y desarrollo de tu negocio.
+                La inversión inicial se recupera rápidamente en comparación con la competencia, y recibirás capacitación y asesoría permanente para impulsar el crecimiento y desarrollo de tu negocio.
             </p>
             <p>
-                Obtendrás seguridad por tu inversión. Con Piaggio moto taxi cuentas con un constante y sólido soporte en todas las áreas de tu negocio, con personal especializado en cada una de las áreas ofreciéndote: <strong>REFACCIONES, POST-VENTA y VENTAS.</strong>
+                Contarás con el respaldo de SHINERAY, que te brinda un sólido soporte en todas las áreas de tu negocio, con personal especializado en <strong>REFACCIONES, SERVICIO POST-VENTA y VENTAS.</strong>
             </p>
         </div>
 
