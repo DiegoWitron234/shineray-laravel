@@ -43,9 +43,6 @@
 <!-- Bootstrap JS Bundle (incluye Popper) -->
 <script src="{{ asset('main/js/bootstrap.bundle.min.js') }}"></script>
 
-<!-- Scripts generales -->
-<script src="{{ asset('main/js/main.js') }}"></script>
-
 <!-- Script para el botón "TOP" -->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
