@@ -7,6 +7,9 @@
 @endsection
 
 @section('content')
+
+    @include('partials.whatsapp')
+
     <!-- Imagen de fondo con título -->
     <div class="hero-section">
         <div class="hero-overlay">

@@ -14,6 +14,8 @@
 
     @include('partials.cotizacion-partial')
 
+    @include('partials.whatsapp')
+
     <!-- Carousel Principal -->
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
         <div class="carousel-indicators">
@@ -180,12 +182,6 @@
                 </p>
             </div>
         </div>
-    </section>
-
-    <section class="div-flotante">
-        <a href="https://wa.me/529932787360?text=Hola, deseo información." target="_blank" class="icono-flotante">
-            <img src="{{ asset('main/images/redes-sociales/whatsapp.png') }}" loading="lazy" alt="WhatsApp" class="icono-flotante-img">
-        </a>
     </section>
 
 

@@ -10,6 +10,9 @@
 @endsection
 
 @section('content')
+
+    @include('partials.whatsapp')
+
     <!-- Imagen Encabezado -->
     <section class="single-page-header">
         <img src="{{ asset('main/images/headers/header.jpg') }}" alt="Historia de la Empresa" class="img-fluid w-100">
