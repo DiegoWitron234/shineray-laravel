@@ -20,7 +20,7 @@
 
     <!-- Encabezado -->
     <div class="container my-5" data-aos="fade-in">
-        <h1 class="display-4 text-center">Catálogo de Vehículos</h1>
+        <h1 class="display-4 text-center">Vehículos</h1>
         <p class="lead text-center">Todos nuestros automóviles.</p>
     </div>
 
