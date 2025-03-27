@@ -36,6 +36,9 @@
                         <a href="#" class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/TTKW.png') }}" alt="TikTok">
                         </a>
+                        <a href="#" class="contact-networks-icon">
+                            <img src="{{ asset('main/images/redes-sociales/iconos-blanco/WAW.png') }}" alt="TikTok">
+                        </a>
                     </div>
                 </div>
             </div>

@@ -20,3 +20,23 @@
 .btn-info {
     background-image: url('../images/elementos/btncatalogo.png');
 }
+
+.custom-arrow {
+    width: 40px;
+    height: auto;
+}
+
+.carousel-control-prev {
+    left: 30px; /* borde izquierdo */
+}
+
+.carousel-control-next {
+    right: 30px; /* borde derecho */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+}
