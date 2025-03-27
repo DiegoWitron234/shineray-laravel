@@ -105,15 +105,16 @@
 .btn-shineray {
     display: inline-block;
     background: url('../images/elementos/btnprobarunshineray.png') no-repeat center center;
-    background-size: contain;
-    width: 210px;   /* Ajustar el ancho */
-    height: 27px;   /* Ajustar la altura */
+    background-size: 100% 100%;
+    width: 300px;
+    height: 40px;
     border: none;
-    text-indent: -9999px;  /* Oculta el texto */
+    text-indent: -9999px;
     overflow: hidden;
     transition: background 0.3s ease;
     margin: 1em auto;
 }
+
 
 
 .italian-subtitle2 {
