@@ -17,43 +17,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('main/images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
-
     @yield('extra_head')
 </head>
 <body>
 
-<!-- Header / Barra de navegación -->
-<header class="bg-light border-bottom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-light container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('main/images/logoshineray.png') }}" alt="Logo Shineray" style="height:50px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item me-5">
-                    <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : '' }}" href="{{ route('inicio') }}">Inicio</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link {{ request()->routeIs('empresa') ? 'active' : '' }}" href="{{ route('empresa') }}">Empresa</a>
-                </li>
-                <li class="nav-item me-5">
-                    <a class="nav-link {{ request()->routeIs('vehiculos') ? 'active' : '' }}" href="{{ route('vehiculos') }}">Vehículos</a>
-                </li>
-          <li class="nav-item me-5">
-            <a class="nav-link {{ request()->routeIs('distribuidores') ? 'active' : '' }}" href="{{ route('distribuidores') }}">Distribuidores</a>
-          </li>
-
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('contacto') ? 'active' : '' }}" href="{{ route('contacto') }}">Contacto</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+{{-- Incluir el navbar --}}
+@include('partials.navbar')
 
 <main>
     @if (session('status'))
@@ -68,47 +37,8 @@
     @yield('content')
 </main>
 
-
-
-
-<!-- Footer Oscuro (Estilo Shineray) -->
-<footer class="shineray-footer">
-    <div class="container">
-        <!-- Fila superior: logotipos y enlaces legales -->
-        <div class="row align-items-center">
-            <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
-                <img src="{{ asset('main/images/elementos/logoshinerayblanco.png') }}" alt="Shineray Logo" class="me-3 footer-logo">
-                <!-- Puedes incluir otro logotipo si es necesario -->
-            </div>
-            <div class="col-md-6 text-md-end">
-                <a href="#" class="footer-link me-3">POLÍTICA DE PRIVACIDAD</a>
-                <a href="#" class="footer-link">TÉRMINOS Y CONDICIONES</a>
-            </div>
-        </div>
-        <!-- Fila inferior: derechos de autor y redes sociales -->
-        <div class="row mt-3 align-items-center">
-            <div class="col-md-6">
-                <p class="mb-0 text-white-50">DERECHOS DE AUTOR © 2012 - 2025 Moto Galería</p>
-            </div>
-            <div class="col-md-6 text-md-end mt-3 mt-md-0">
-                <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/FBW.png') }}" alt="Facebook">
-                </a>
-                <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/INW.png') }}" alt="Instagram">
-                </a>
-                <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/YTW.png') }}" alt="YouTube">
-                </a>
-                <a href="#" class="social-icon">
-                    <img src="{{ asset('main/images/redes-sociales/iconos-blanco/TTKW.png') }}" alt="TikTok">
-                </a>
-            </div>
-        </div>
-        <!-- Botón para volver al inicio -->
-        <button id="btnBackToTop" class="btn-back-to-top">TOP</button>
-    </div>
-</footer>
+{{-- Incluir el footer --}}
+@include('partials.footer')
 
 <!-- Bootstrap JS Bundle (incluye Popper) -->
 <script src="{{ asset('main/js/bootstrap.bundle.min.js') }}"></script>
