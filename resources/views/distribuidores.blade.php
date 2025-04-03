@@ -33,39 +33,7 @@
             </p>
         </div>
 
-        <!-- Columna derecha: Cuadro de pestañas -->
-        <div class="tab-container">
-            <div class="tabs">
-                <button class="tab active" data-target="requisitos">Requisitos</button>
-                <button class="tab" data-target="moral">Moral</button>
-                <button class="tab" data-target="fisico">Físico</button>
-            </div>
-
-            <div class="tab-content">
-                <div class="tab-panel active" id="requisitos">
-                    <ul>
-                        <li><span class="highlight">✔</span> Inversión mínima de 5 unidades.</li>
-                        <li><span class="highlight">✔</span> Local para exhibición de unidades.</li>
-                        <li><span class="highlight">✔</span> Inversión de <span class="price">$180,000.00</span> en refacciones.</li>
-                    </ul>
-                </div>
-                <div class="tab-panel" id="moral">
-                    <ul>
-                        <li><span class="highlight">✔</span> Acta constitutiva.</li>
-                        <li><span class="highlight">✔</span> RFC de la empresa.</li>
-                        <li><span class="highlight">✔</span> Identificación oficial del representante legal.</li>
-                    </ul>
-                </div>
-                <div class="tab-panel" id="fisico">
-                    <ul>
-                        <li><span class="highlight">✔</span> Identificación oficial.</li>
-                        <li><span class="highlight">✔</span> Comprobante de domicilio.</li>
-                        <li><span class="highlight">✔</span> Registro en el SAT.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+       </div>
 
     <script src="{{ asset('main/js/distribuidores.js') }}"></script>
 @endsection
