@@ -14,7 +14,14 @@
                 <h1>Contacto</h1>
                 <p>Si tiene alguna pregunta y solicitud de cotización, no dude en ponerse en contacto con nosotros.</p>
                 <div class="contact-details">
-                    <p><strong>Dirección:</strong> 1737 Parque Pl. Ambar Pte. Col. Xamaipak, 29060 Tuxtla Gutiérrez, Chiapas, México.</p>
+                    <p>
+                        <strong>Dirección:</strong>
+                        <a href="https://maps.app.goo.gl/HDsaQGTfw4yMX13c6"
+                           target="_blank"
+                           rel="noopener">
+                            1737 Parque Pl. Ambar Pte. Col. Xamaipak, 29060 Tuxtla Gutiérrez, Chiapas, México.
+                        </a>
+                    </p>
                     <p><strong>Teléfono:</strong> <a href="tel:+529932787360">+52 993 278 7360</a></p>
                     <p><strong>Email:</strong> <a href="mailto:ventas@shineraymotogaleria.com">ventas@shineraymotogaleria.com</a></p>
                     <p><strong>Horarios de Atención:</strong> Lunes a Viernes de 9:00 AM a 6:00 PM<br>
