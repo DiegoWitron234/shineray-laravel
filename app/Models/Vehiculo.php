@@ -14,11 +14,16 @@ class Vehiculo extends Model
         'modelo',
         'precio',
         'descripcion',
-        'imagen',    // Imagen para la página "Inicio"
-        'catalogo',  // Nueva imagen para la página "Vehículos"
-        'detalles',  // Imagen con los datos del vehiculo
+        'imagen',         // Imagen principal
+        'catalogo',       // Imagen para catálogo
+        'detalles',       // Imagen con datos (detalles)
+        'detalles_imagenes', // Nuevo campo: array de objetos (cada uno con "ruta" y "orden")
         'carga',
         'motor',
         'rendimiento'
+    ];
+
+    protected $casts = [
+        'detalles_imagenes' => 'array', // Se convierte automáticamente a array
     ];
 }

@@ -37,9 +37,13 @@
                     <div class="row align-items-center">
                         <div class="col-md-5">
                             @if($vehiculo->imagen)
-                                <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}" alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}" class="img-fluid rounded hover-lift">
+                                <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}"
+                                     alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
+                                     class="img-fluid rounded hover-lift">
                             @else
-                                <img src="{{ asset('main/images/placeholder.svg') }}" alt="Sin imagen" class="img-fluid rounded hover-lift">
+                                <img src="{{ asset('main/images/placeholder.svg') }}"
+                                     alt="Sin imagen"
+                                     class="img-fluid rounded hover-lift">
                             @endif
                         </div>
                         <div class="col-md-7">
@@ -54,8 +58,26 @@
         </div>
         <div class="text-center">
             <a href="{{ route('vehiculos') }}" class="btn btn-primary">
-                &laquo; Volver al catálogo
+                &laquo; Volver atrás
             </a>
         </div>
     </div>
+
+    <!-- Sección con las imágenes de "detalles_imagenes" a ancho completo -->
+    @php
+        $imagenes = collect($vehiculo->detalles_imagenes)->reverse()->all();
+    @endphp
+
+    <div class="container-fluid px-0">
+        @if($imagenes && count($imagenes))
+            @foreach($imagenes as $detalle)
+                <img src="{{ Storage::disk('vehiculos_public')->url($detalle) }}" class="img-fluid w-100" alt="Detalle del vehículo">
+            @endforeach
+        @else
+            <p class="text-center">No se encontraron imágenes adicionales.</p>
+        @endif
+    </div>
+
+
+
 @endsection

@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('modelo');
             $table->decimal('precio', 8, 2);
             $table->text('descripcion')->nullable();
-            $table->string('imagen')->nullable();   // Imagen para página "Inicio"
+            $table->string('imagen')->nullable();
+            $table->string('catalogo')->nullable();
+            $table->string('detalles')->nullable();
+            // Nuevo campo para almacenar las imágenes de detalles (como array de objetos)
+            $table->json('detalles_imagenes')->nullable();
             $table->decimal('carga');
             $table->decimal('motor');
             $table->decimal('rendimiento');
@@ -28,7 +32,7 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('vehiculos');
     }
