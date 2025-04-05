@@ -115,8 +115,6 @@
     margin: 1em auto;
 }
 
-
-
 .italian-subtitle2 {
     font-size: 1.3rem;
     margin-bottom: 0.5em;
@@ -161,9 +159,16 @@
 .right-arrow {
     right: 20px;
 }
-.arrow-img {
+.arrow-img, .custom-arrow {
     width: 40px;
     height: auto;
+}
+
+/* Media query para móviles: ajustar la posición vertical de las flechas */
+@media (max-width: 576px) {
+    .arrow-button {
+        top: 45%; /* Ajusta este valor según convenga para centrar mejor en móviles */
+    }
 }
 
 /* Botones Cotizar / Más info (imagen de fondo) */
@@ -179,7 +184,7 @@
     text-indent: -9999px;
     overflow: hidden;
     cursor: pointer;
-    margin: 50px;
+    margin: 10px;  /* Se reduce el margen para evitar excesos */
 }
 
 .btn-cotizar {
@@ -194,14 +199,10 @@
    (usando el contenedor .tabs-wrapper y .tabs-line)
 */
 .tabs-wrapper {
-    margin: 1rem 0; /* Espacio vertical opcional */
-    /* display, justify-content y align-items se aplican en tu vista con
-       d-flex align-items-center justify-content-center
-       o puedes ponerlos aquí si prefieres. */
+    margin: 1rem 0;
 }
-
 .tabs-line {
-    width: 300px; /* Ajusta la longitud */
+    width: 300px;
     height: 5px;
     background-color: #c00;
     margin: 0 15px;

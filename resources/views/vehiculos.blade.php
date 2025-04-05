@@ -5,7 +5,8 @@
 @section('extra_head')
     <!-- AOS CSS para animaciones -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <!-- Estilos exclusivos -->
+
+    <!-- Estilos exclusivos para la página de Vehículos -->
     <link rel="stylesheet" href="{{ asset('main/css/vehiculos.css') }}">
 @endsection
 
@@ -14,38 +15,37 @@
     @include('partials.cotizacion-partial')
     @include('partials.whatsapp')
 
-    <!-- Encabezado con menos espacio -->
-    <!-- Cambiamos .my-5 a algo menor, p. ej. .my-3 -->
-    <div class="container my-3" data-aos="fade-in">
-        <h1 class="display-4 text-center mb-2">Vehículos</h1>
-        <p class="lead text-center mb-4">Todos nuestros automóviles.</p>
+    <!-- Encabezado -->
+    <div class="container my-5" data-aos="fade-in">
+        <h1 class="display-4 text-center">Vehículos</h1>
+        <p class="lead text-center">Todos nuestros automóviles.</p>
     </div>
 
     <!-- Carrusel de Vehículos -->
     @if($vehiculos->count() > 0)
-        <!-- Quitamos py-4 o la reducimos a py-1 para menos espacio vertical -->
-        <div id="vehiculosCarousel" class="carousel slide" data-bs-ride="false" style="margin-top: -10px;">
+        <div id="vehiculosCarousel" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
 
                 @foreach($vehiculos as $index => $vehiculo)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <!-- Contenedor principal con menos padding vertical -->
-                        <div class="container py-1">
-                            <!-- En vez de <h2> con .mb-4, reducimos margen o lo quitamos -->
-                            <div class="text-center precio-container">
+                        <div class="container py-4">
+
+                            <!-- Mostrar imagen de precio en la parte superior -->
+                            <div class="text-center mb-4">
                                 @if($vehiculo->imagen_precio)
                                     <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen_precio) }}"
                                          alt="Precio {{ $vehiculo->modelo }}"
-                                         class="img-fluid imagen-precio"
+                                         class="img-fluid"
+                                         style="max-height: 300px; width: auto; display: block; margin: 0 auto;">
                                 @else
-                                    <h2 class="text-center mb-2">
-                                        {{ $vehiculo->precio }}
+                                    <h2 class="text-center">
+                                        {{ $vehiculo->tipo }} {{ $vehiculo->modelo }}
                                     </h2>
                                 @endif
                             </div>
 
                             <div class="row align-items-center">
-                                <!-- Imagen izquierda -->
+                                <!-- Columna Izquierda: Imagen de vehículo con fondo verde (catalogo) -->
                                 <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
                                     @if($vehiculo->catalogo)
                                         <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->catalogo) }}"
@@ -60,8 +60,9 @@
                                     @endif
                                 </div>
 
-                                <!-- Imagen de detalles con botones superpuestos -->
+                                <!-- Columna Derecha: Imagen con datos (detalles) y botones sobrepuestos -->
                                 <div class="col-12 col-md-6">
+                                    <!-- Contenedor de la imagen, con posición relativa -->
                                     <div class="details-container position-relative" style="max-height: 500px;">
                                         @if($vehiculo->detalles)
                                             <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->detalles) }}"
@@ -75,6 +76,7 @@
                                                  style="max-height: 500px; width: 100%;">
                                         @endif
 
+                                        <!-- Contenedor de botones superpuestos -->
                                         <div class="buttons-overlay">
                                             <a href="#"
                                                class="btn-cotizar me-3"
@@ -88,14 +90,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div><!-- row -->
-                        </div><!-- container -->
+
+                            </div>
+                        </div>
                     </div>
                 @endforeach
 
-            </div><!-- carousel-inner -->
+            </div>
 
-            <!-- Flecha izquierda -->
+            <!-- Flecha izquierda personalizada -->
             <button class="carousel-control-prev" type="button"
                     data-bs-target="#vehiculosCarousel" data-bs-slide="prev">
                 <img src="{{ asset('main/images/elementos/flechaIz.png') }}"
@@ -104,7 +107,7 @@
                 <span class="visually-hidden">Anterior</span>
             </button>
 
-            <!-- Flecha derecha -->
+            <!-- Flecha derecha personalizada -->
             <button class="carousel-control-next" type="button"
                     data-bs-target="#vehiculosCarousel" data-bs-slide="next">
                 <img src="{{ asset('main/images/elementos/flechaDe.png') }}"

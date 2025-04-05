@@ -12,11 +12,11 @@
     overflow: hidden;
     cursor: pointer;
     margin: 50px;
+    min-width: 150px;
 }
 
 .btn-cotizar {
     background-image: url('../images/elementos/btncotizar.png');
-    bottom: -10px;
 }
 .btn-info {
     background-image: url('../images/elementos/btncatalogo.png');
@@ -42,7 +42,6 @@
     width: auto;
 }
 
-/* Asegura que la imagen ocupe todo el contenedor */
 .details-image {
     display: block;
     width: 100%;
@@ -57,28 +56,46 @@
 /* Contenedor de botones: se posiciona absolutamente al fondo, centrado horizontalmente */
 .buttons-overlay {
     position: absolute;
-    bottom: -20px;  /* Ajusta este valor para mover los botones hacia arriba o abajo */
+    bottom: -40px;  /* Ajusta este valor para mover los botones hacia arriba o abajo */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;   /* Para que los botones puedan ocupar todo el ancho */
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;     /* Espacio entre los botones */
 }
 
-/* Opcional: Estilos para los botones, si deseas modificar sus márgenes o tamaño */
-.btn-cotizar,
-.btn-info {
-    min-width: 150px;
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
 }
 
-.imagen-precio {
-    max-height: 400px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
+/* Asegúrate de que el contenedor padre (donde se superponen las flechas) tenga position: relative */
+.col-12.position-relative {
+    position: relative;
 }
 
-.precio-container {
-    bottom: -50px; /* Ajusta este valor a tu gusto */
+/* Posicionamiento específico de las flechas */
+.left-arrow {
+    left: 10px; /* Ajusta según convenga */
 }
+
+.right-arrow {
+    right: 10px; /* Ajusta según convenga */
+}
+
+/* Opcional: ajustes para móviles */
+@media (max-width: 576px) {
+    .left-arrow, .right-arrow {
+        left: 5px;
+        right: 5px;
+        /* O ajustar top o transform si es necesario */
+    }
+}
+
+
