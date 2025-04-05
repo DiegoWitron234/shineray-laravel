@@ -69,13 +69,16 @@
                 <div class="col-md-6">
                     <h2 class="text-primary">Misión</h2>
                     <p class="lead">
-                        Ser una empresa que brinde mejores oportunidades de empleo, autoempleo o de negocio a las personas, a través de nuestros mototaxis con el mejor servicio postventa y refacciones.
+                        "Ofrecer soluciones de movilidad accesibles , eficientes y ostenubles que respeten las culturas locales
+                        y optimicen el transporte de personas y bienes, contribuyendo activamente al desarrollo economico y oscial de las
+                        comunidades."
                     </p>
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-primary">Visión</h2>
                     <p class="lead">
-                        Ser parte de la historia de éxito de las familias a nivel nacional y ser vista como una marca que ofrece la mejor opción para tener ingresos para sí mismo.
+                        "Ser la marca lider en moto carros en México, lida participación de
+                        mercado y presencia en Latinoamérica"
                     </p>
                 </div>
             </div>
@@ -111,6 +114,14 @@
                     <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Competitividad" class="img-fluid mb-2 ">
                     <h4>Competitividad</h4>
                     <p>Siempre buscamos estar a la vanguardia, ofreciendo los mejores estándares de calidad.</p>
+                </div>
+                <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Competitividad" class="img-fluid mb-2 ">
+                    <h4>Orientacion</h4>
+                    <p>Reconocemos que los clientes, compañeros de
+                        trabajo, proveedores y accionistas son el motor del negocio, por lo tanto,
+                        damos prioridad a sus necesidades y expectativas para mejorar su
+                        satisfacción y decisión de quedarse con nosotros</p>
                 </div>
             </div>
         </div>
