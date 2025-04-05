@@ -56,7 +56,6 @@
                 </select>
             </div>
 
-
             <div class="form-group">
                 <label for="codigo_postal">Código Postal <span class="required">*</span></label>
                 <input type="text" id="codigo_postal" name="codigo_postal" required>
@@ -96,14 +95,20 @@
         display: none;
         position: fixed;
         z-index: 9999;
-        left: 0; top: 0;
-        width: 100%; height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto; /* Permite scroll si el contenido es mayor que la pantalla */
     }
+    /* Cambiamos la posición a fixed para que el overlay se mantenga en todo momento */
     .modal-overlay {
-        position: absolute;
-        width: 100%; height: 100%;
+        position: fixed;
+        width: 100%;
+        height: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        left: 0; top: 0;
+        left: 0;
+        top: 0;
     }
     .modal-content {
         position: relative;
@@ -116,49 +121,69 @@
         box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
     .modal-close {
-        background: none; border: none;
-        font-size: 28px; color: #666;
-        cursor: pointer; position: absolute;
-        top: 15px; right: 20px;
+        background: none;
+        border: none;
+        font-size: 28px;
+        color: #666;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
     .modal-title {
-        margin-top: 0; margin-bottom: 8px;
-        font-size: 24px; font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 24px;
+        font-weight: 600;
     }
     .modal-subtitle {
-        font-size: 14px; color: #666;
+        font-size: 14px;
+        color: #666;
         margin-bottom: 20px;
     }
     .form-group {
         margin-bottom: 16px;
-        display: flex; flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
     .form-group label {
-        font-weight: 500; margin-bottom: 4px;
+        font-weight: 500;
+        margin-bottom: 4px;
     }
     .form-group input[type="text"],
     .form-group input[type="email"],
     .form-group input[type="tel"],
     .form-group select {
-        padding: 8px; font-size: 14px;
-        border: 1px solid #ccc; border-radius: 4px;
+        padding: 8px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
     .form-group select {
         height: 40px;
     }
     .checkbox-group {
-        flex-direction: row; align-items: center;
+        flex-direction: row;
+        align-items: center;
     }
     .checkbox-group input[type="checkbox"] {
-        margin-right: 8px; width: auto;
+        margin-right: 8px;
+        width: auto;
     }
-    .checkbox-group label { margin-bottom: 0; }
-    .required { color: red; }
+    .checkbox-group label {
+        margin-bottom: 0;
+    }
+    .required {
+        color: red;
+    }
     .btn-enviar {
         background-color: #0072CE;
-        color: #fff; border: none;
-        padding: 10px 18px; font-size: 16px;
-        border-radius: 4px; cursor: pointer;
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
     }
     .btn-enviar:hover {
         background-color: #005FAF;
