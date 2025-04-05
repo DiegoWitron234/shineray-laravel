@@ -16,6 +16,7 @@
 
 .btn-cotizar {
     background-image: url('../images/elementos/btncotizar.png');
+    bottom: -10px;
 }
 .btn-info {
     background-image: url('../images/elementos/btncatalogo.png');
@@ -39,4 +40,45 @@
     top: 50%;
     transform: translateY(-50%);
     width: auto;
+}
+
+/* Asegura que la imagen ocupe todo el contenedor */
+.details-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Contenedor con position relative para la imagen */
+.details-container {
+    position: relative;
+}
+
+/* Contenedor de botones: se posiciona absolutamente al fondo, centrado horizontalmente */
+.buttons-overlay {
+    position: absolute;
+    bottom: -20px;  /* Ajusta este valor para mover los botones hacia arriba o abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;   /* Para que los botones puedan ocupar todo el ancho */
+    display: flex;
+    justify-content: center;
+    gap: 10px;     /* Espacio entre los botones */
+}
+
+/* Opcional: Estilos para los botones, si deseas modificar sus márgenes o tamaño */
+.btn-cotizar,
+.btn-info {
+    min-width: 150px;
+}
+
+.imagen-precio {
+    max-height: 400px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.precio-container {
+    bottom: -50px; /* Ajusta este valor a tu gusto */
 }

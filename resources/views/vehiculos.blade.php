@@ -3,42 +3,49 @@
 @section('title', 'Vehículos - Shineray')
 
 @section('extra_head')
-
     <!-- AOS CSS para animaciones -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-
-    <!-- Estilos exclusivos para la página de Vehículos -->
+    <!-- Estilos exclusivos -->
     <link rel="stylesheet" href="{{ asset('main/css/vehiculos.css') }}">
-
 @endsection
 
 @section('content')
 
     @include('partials.cotizacion-partial')
-
     @include('partials.whatsapp')
 
-    <!-- Encabezado -->
-    <div class="container my-5" data-aos="fade-in">
-        <h1 class="display-4 text-center">Vehículos</h1>
-        <p class="lead text-center">Todos nuestros automóviles.</p>
+    <!-- Encabezado con menos espacio -->
+    <!-- Cambiamos .my-5 a algo menor, p. ej. .my-3 -->
+    <div class="container my-3" data-aos="fade-in">
+        <h1 class="display-4 text-center mb-2">Vehículos</h1>
+        <p class="lead text-center mb-4">Todos nuestros automóviles.</p>
     </div>
 
     <!-- Carrusel de Vehículos -->
     @if($vehiculos->count() > 0)
-        <div id="vehiculosCarousel" class="carousel slide" data-bs-ride="false">
+        <!-- Quitamos py-4 o la reducimos a py-1 para menos espacio vertical -->
+        <div id="vehiculosCarousel" class="carousel slide" data-bs-ride="false" style="margin-top: -10px;">
             <div class="carousel-inner">
 
                 @foreach($vehiculos as $index => $vehiculo)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                        <div class="container py-4">
-                            <!-- Nombre del modelo arriba de las imágenes -->
-                            <h2 class="text-center mb-4">
-                                {{ $vehiculo->tipo }} {{ $vehiculo->modelo }}
-                            </h2>
+                        <!-- Contenedor principal con menos padding vertical -->
+                        <div class="container py-1">
+                            <!-- En vez de <h2> con .mb-4, reducimos margen o lo quitamos -->
+                            <div class="text-center precio-container">
+                                @if($vehiculo->imagen_precio)
+                                    <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen_precio) }}"
+                                         alt="Precio {{ $vehiculo->modelo }}"
+                                         class="img-fluid imagen-precio"
+                                @else
+                                    <h2 class="text-center mb-2">
+                                        {{ $vehiculo->precio }}
+                                    </h2>
+                                @endif
+                            </div>
 
                             <div class="row align-items-center">
-                                <!-- Columna Izquierda: Imagen de vehículo con fondo verde -->
+                                <!-- Imagen izquierda -->
                                 <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
                                     @if($vehiculo->catalogo)
                                         <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->catalogo) }}"
@@ -53,42 +60,42 @@
                                     @endif
                                 </div>
 
-                                <!-- Columna Derecha: Imagen con datos (detalles) y botones -->
-                                <div class="col-12 col-md-6 text-center">
-                                    @if($vehiculo->detalles)
-                                        <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->detalles) }}"
-                                             alt="Detalles {{ $vehiculo->modelo }}"
-                                             class="img-fluid"
-                                             style="max-height: 500px;">
-                                    @else
-                                        <img src="{{ asset('main/images/placeholder.svg') }}"
-                                             alt="Sin imagen de detalles"
-                                             class="img-fluid"
-                                             style="max-height: 500px;">
-                                    @endif
+                                <!-- Imagen de detalles con botones superpuestos -->
+                                <div class="col-12 col-md-6">
+                                    <div class="details-container position-relative" style="max-height: 500px;">
+                                        @if($vehiculo->detalles)
+                                            <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->detalles) }}"
+                                                 alt="Detalles {{ $vehiculo->modelo }}"
+                                                 class="img-fluid details-image"
+                                                 style="max-height: 500px; width: 100%;">
+                                        @else
+                                            <img src="{{ asset('main/images/placeholder.svg') }}"
+                                                 alt="Sin imagen de detalles"
+                                                 class="img-fluid details-image"
+                                                 style="max-height: 500px; width: 100%;">
+                                        @endif
 
-                                    <!-- Botones Cotizar / Ver Catálogo (centrados) -->
-                                    <div class="mt-4">
-                                        <a href="#"
-                                           class="me-3 btn-cotizar"
-                                           data-modelo="{{ $vehiculo->modelo }}">
-                                            Cotizar</a>
-
-                                        <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
-                                           class="btn-info"
-                                           style="min-width: 150px;">
-                                            Ver Catálogo
-                                        </a>
+                                        <div class="buttons-overlay">
+                                            <a href="#"
+                                               class="btn-cotizar me-3"
+                                               data-modelo="{{ $vehiculo->modelo }}">
+                                                Cotizar
+                                            </a>
+                                            <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
+                                               class="btn-info">
+                                                Ver Catálogo
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div><!-- row -->
+                        </div><!-- container -->
                     </div>
                 @endforeach
 
-            </div>
+            </div><!-- carousel-inner -->
 
-            <!-- Flecha izquierda personalizada -->
+            <!-- Flecha izquierda -->
             <button class="carousel-control-prev" type="button"
                     data-bs-target="#vehiculosCarousel" data-bs-slide="prev">
                 <img src="{{ asset('main/images/elementos/flechaIz.png') }}"
@@ -97,7 +104,7 @@
                 <span class="visually-hidden">Anterior</span>
             </button>
 
-            <!-- Flecha derecha personalizada -->
+            <!-- Flecha derecha -->
             <button class="carousel-control-next" type="button"
                     data-bs-target="#vehiculosCarousel" data-bs-slide="next">
                 <img src="{{ asset('main/images/elementos/flechaDe.png') }}"
@@ -105,7 +112,6 @@
                      class="custom-arrow">
                 <span class="visually-hidden">Siguiente</span>
             </button>
-
         </div>
     @else
         <div class="container">

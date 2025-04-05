@@ -13,18 +13,20 @@ return new class extends Migration
     {
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo');
+            $table->string('tipo')->nullable();
             $table->string('modelo');
-            $table->decimal('precio', 8, 2);
+            $table->decimal('precio', 8, 2)->nullable();
             $table->text('descripcion')->nullable();
             $table->string('imagen')->nullable();
             $table->string('catalogo')->nullable();
             $table->string('detalles')->nullable();
-            // Nuevo campo para almacenar las imágenes de detalles (como array de objetos)
+            // Campo para almacenar las imágenes de detalles (array de rutas)
             $table->json('detalles_imagenes')->nullable();
-            $table->decimal('carga');
-            $table->decimal('motor');
-            $table->decimal('rendimiento');
+            // Nueva columna para la imagen de precio
+            $table->string('imagen_precio')->nullable();
+            $table->decimal('carga')->nullable();
+            $table->decimal('motor')->nullable();
+            $table->decimal('rendimiento')->nullable();
             $table->timestamps();
         });
     }

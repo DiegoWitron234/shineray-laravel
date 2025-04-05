@@ -14,10 +14,11 @@ class Vehiculo extends Model
         'modelo',
         'precio',
         'descripcion',
-        'imagen',         // Imagen principal
-        'catalogo',       // Imagen para catálogo
-        'detalles',       // Imagen con datos (detalles)
-        'detalles_imagenes', // Nuevo campo: array de objetos (cada uno con "ruta" y "orden")
+        'imagen',          // Imagen principal
+        'catalogo',        // Imagen para catálogo
+        'detalles',        // Imagen con datos (detalles)
+        'detalles_imagenes', // Array de imágenes de detalles
+        'imagen_precio',   // Nueva imagen para el precio
         'carga',
         'motor',
         'rendimiento'

@@ -21,51 +21,51 @@ class VehiculoResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('tipo')
-                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('modelo')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('precio')
-                    ->numeric()
-                    ->required(),
+                    ->numeric(),
                 Forms\Components\Textarea::make('descripcion')
                     ->rows(3)
                     ->maxLength(65535),
                 Forms\Components\FileUpload::make('imagen')
                     ->image()
                     ->disk('vehiculos_public')
-                    ->directory(''),
-                // Nuevo campo para la imagen de catálogo
+                    ->directory('imagen_inicio'),
+                // Imagen para catálogo
                 Forms\Components\FileUpload::make('catalogo')
                     ->image()
                     ->disk('vehiculos_public')
-                    ->directory(''),
+                    ->directory('catalogo'),
+                // Imagen con datos (detalles)
                 Forms\Components\FileUpload::make('detalles')
                     ->image()
                     ->disk('vehiculos_public')
-                    ->directory(''),
-
-                // Nuevo campo para múltiples imágenes de detalles/información:
+                    ->directory('detalles'),
+                // Múltiples imágenes de detalles/información
                 Forms\Components\FileUpload::make('detalles_imagenes')
                     ->multiple()
                     ->image()
                     ->disk('vehiculos_public')
-                    ->directory('vehiculos/detalles_imagenes')
+                    ->directory('detalles_imagenes')
                     ->maxFiles(10)
                     ->reorderable(),
-
+                // NUEVO: Imagen de precio
+                Forms\Components\FileUpload::make('imagen_precio')
+                    ->image()
+                    ->disk('vehiculos_public')
+                    ->directory('precios'),
                 Forms\Components\TextInput::make('carga')
-                    ->numeric()
-                    ->required(),
+                    ->numeric(),
                 Forms\Components\TextInput::make('motor')
-                    ->numeric()
-                    ->required(),
+                    ->numeric(),
                 Forms\Components\TextInput::make('rendimiento')
-                    ->numeric()
-                    ->required(),
+                    ->numeric(),
             ]);
     }
+
 
 
     public static function table(Table $table): Table
