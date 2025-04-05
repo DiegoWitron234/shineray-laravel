@@ -117,11 +117,11 @@
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="400">
                     <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Competitividad" class="img-fluid mb-2 ">
-                    <h4>Orientación</h4>
+                    <h4>Orientacion</h4>
                     <p>Reconocemos que los clientes, compañeros de
                         trabajo, proveedores y accionistas son el motor del negocio, por lo tanto,
                         damos prioridad a sus necesidades y expectativas para mejorar su
-                        satisfacción y decisión de quedarse con nosotros.</p>
+                        satisfacción y decisión de quedarse con nosotros</p>
                 </div>
             </div>
         </div>
