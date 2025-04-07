@@ -116,7 +116,7 @@
                     <p>Siempre buscamos estar a la vanguardia, ofreciendo los mejores estándares de calidad.</p>
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Competitividad" class="img-fluid mb-2 ">
+                    <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Orientacion" class="img-fluid mb-2 ">
                     <h4>Orientacion</h4>
                     <p>Reconocemos que los clientes, compañeros de
                         trabajo, proveedores y accionistas son el motor del negocio, por lo tanto,
@@ -126,6 +126,34 @@
             </div>
         </div>
     </section>
+    <!-- Reconocimientos -->
+    <section class="section" id="reconocimientos" data-aos="fade-up">
+        <div class="container py-5">
+            <h2 class="text-center text-primary mb-5">Reconocimientos</h2>
+            <div class="row">
+                <div class="col-md-2 text-center" data-aos="zoom-in">
+                    <img src="{{ asset('main/images/Reconocimientos/Comerciomexico.png') }}" alt="Premio a la Innovación" class="img-fluid mb-3 reconocimiento-img">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="{{ asset('main/images/Reconocimientos/Derechoshumanos.png') }}" alt="Reconocimiento a la Calidad" class="img-fluid mb-3 reconocimiento-img">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/factor360.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/Logo Oficial 2020.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/logoESR.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/ONU.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
