@@ -69,15 +69,17 @@
                 <div class="col-md-6">
                     <h2 class="text-primary">Misión</h2>
                     <p class="lead">
-                        "Ofrecer soluciones de movilidad accesibles , eficientes y ostenubles que respeten las culturas locales
-                        y optimicen el transporte de personas y bienes, contribuyendo activamente al desarrollo economico y oscial de las
+                        "Ofrecer soluciones de movilidad accesibles, eficientes y
+                        sostenibles que respeten las culturas locales y optimicen el
+                        transporte de personas y bienes, contribuyendo
+                        activamente al desarrollo económico y social de las
                         comunidades."
                     </p>
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-primary">Visión</h2>
                     <p class="lead">
-                        "Ser la marca lider en moto carros en México, lida participación de
+                        "Ser la marca lider en moto carros en México, con una sólida participación de
                         mercado y presencia en Latinoamérica"
                     </p>
                 </div>
@@ -132,22 +134,22 @@
             <h2 class="text-center text-primary mb-5">Reconocimientos</h2>
             <div class="row">
                 <div class="col-md-2 text-center" data-aos="zoom-in">
-                    <img src="{{ asset('main/images/Reconocimientos/Comerciomexico.png') }}" alt="Premio a la Innovación" class="img-fluid mb-3 reconocimiento-img">
+                    <img src="{{ asset('main/images/Reconocimientos/Comerciomexico.png') }}" alt="Premio a la Innovación" class="img-fluid mb-3 reconocimiento-img hover-lift">
                 </div>
                 <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="{{ asset('main/images/Reconocimientos/Derechoshumanos.png') }}" alt="Reconocimiento a la Calidad" class="img-fluid mb-3 reconocimiento-img">
+                    <img src="{{ asset('main/images/Reconocimientos/Derechoshumanos.png') }}" alt="Reconocimiento a la Calidad" class="img-fluid mb-3 reconocimiento-img hover-lift">
                 </div>
                 <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('main/images/Reconocimientos/factor360.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                    <img src="{{ asset('main/images/Reconocimientos/factor360.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
                 </div>
                 <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('main/images/Reconocimientos/Logo Oficial 2020.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                    <img src="{{ asset('main/images/Reconocimientos/Logo Oficial 2020.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
                 </div>
                 <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('main/images/Reconocimientos/logoESR.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                    <img src="{{ asset('main/images/Reconocimientos/logoESR.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
                 </div>
                 <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="{{ asset('main/images/Reconocimientos/ONU.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img">
+                    <img src="{{ asset('main/images/Reconocimientos/ONU.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
                 </div>
             </div>
         </div>

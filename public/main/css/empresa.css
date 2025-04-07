@@ -1,6 +1,6 @@
 /* Estilos específicos para la página Empresa */
 
-/* Ejemplo: efecto hover para imágenes de valores */
+/* Efecto hover para imágenes en el contenedor #valores */
 #valores img {
     max-width: 120px; /* Tamaño de los íconos */
     height: auto;
@@ -8,14 +8,20 @@
 }
 
 #valores img:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Estilos para imágenes de reconocimientos */
 .reconocimiento-img {
     height: 100px;       /* Ajusta la altura según lo que necesites */
     width: auto;         /* Mantiene la proporción original */
     margin: 0 auto;      /* Centra la imagen dentro de su columna */
-    object-fit: contain; /* Se asegura de que toda la imagen se vea sin deformarse */
+    object-fit: contain; /* Se asegura de que la imagen se vea completa sin deformarse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transición */
+}
+
+.reconocimiento-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
