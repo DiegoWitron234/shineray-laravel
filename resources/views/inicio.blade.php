@@ -42,99 +42,69 @@
 
 
     <!-- Sección vehículos -->
+    <div class="container text-center my-2" data-aos="fade-up">
+        <h1 class="display-5">Modelos</h1>
+        <p class="lead">Mira nuestros modelos</p>
+    </div>
+
+
+    <!-- SECCIÓN VEHÍCULOS con CARRUSEL -->
     <div class="container-fluid my-4">
-        <!-- Fila de Tabs -->
-        <div class="row">
-            <div class="col-12">
-                <!-- Envolvemos las tabs en .tabs-wrapper -->
-                <div class="tabs-wrapper d-flex align-items-center justify-content-center">
-                    <!-- Línea roja izquierda -->
-                    <div class="tabs-line"></div>
-
-                    <!-- Tus tabs originales -->
-                    <ul class="nav nav-tabs" id="modelTabs" role="tablist">
-                        @foreach($vehiculos as $index => $vehiculo)
-                            <li class="nav-item" role="presentation">
-                                <button
-                                    class="nav-link {{ $loop->first ? 'active' : '' }}"
-                                    id="tab-{{ $vehiculo->id }}"
-                                    data-bs-toggle="tab"
-                                    data-bs-target="#content-{{ $vehiculo->id }}"
-                                    type="button" role="tab"
-                                    aria-controls="content-{{ $vehiculo->id }}"
-                                    aria-selected="{{ $loop->first ? 'true' : 'false' }}">
-                                    {{ $vehiculo->modelo }}
-                                </button>
-                            </li>
-                        @endforeach
-                    </ul>
-
-                    <!-- Línea roja derecha -->
-                    <div class="tabs-line"></div>
-                </div>
-            </div>
-        </div>
 
         <div class="mt-4"></div>
 
-        <!-- Fila donde irá la imagen y las flechas -->
-        <div class="row justify-content-center">
-            <!-- Contenedor con position: relative para superponer flechas -->
-            <div class="col-12 position-relative text-center">
+        <!-- Carrusel de Bootstrap -->
+        <div id="vehicleCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @foreach($vehiculos as $index => $vehiculo)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        @if($vehiculo->imagen)
+                            <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}"
+                                 alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
+                                 class="d-block w-100 vehicle-image">
+                        @else
+                            <img src="{{ asset('main/images/placeholder.svg') }}"
+                                 alt="Sin imagen"
+                                 class="d-block w-100 vehicle-image">
+                        @endif
 
-                <!-- Contenido de Tabs (imagen y botones) -->
-                <div class="tab-content" id="modelTabsContent">
-                    @foreach($vehiculos as $index => $vehiculo)
-                        <div class="tab-pane fade {{ $loop->first ? 'show active' : '' }}"
-                             id="content-{{ $vehiculo->id }}"
-                             role="tabpanel"
-                             aria-labelledby="tab-{{ $vehiculo->id }}">
-
-                            @if($vehiculo->imagen)
-                                <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen) }}"
-                                     alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
-                                     class="img-fluid vehicle-image mx-auto d-block">
-                            @else
-                                <img src="{{ asset('main/images/placeholder.svg') }}"
-                                     alt="Sin imagen"
-                                     class="img-fluid vehicle-image mx-auto d-block">
-                            @endif
-
-                            <div class="d-flex justify-content-center mt-3">
-                                <!-- Botón con data-modelo -->
-                                <a href="#"
-                                   class="btn-cotizar"
-                                   data-modelo="{{ $vehiculo->modelo }}"
-                                   aria-label="Cotizar">
-                                    Cotizar
-                                </a>
-
-                                <!-- Botón "Más información" -->
-                                <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
-                                   class="btn-info"
-                                   aria-label="Ver catalogo">
-                                    Ver catálogo
-                                </a>
-                            </div>
+                        <!-- Contenedor de botones debajo de la imagen -->
+                        <div class="mt-3 text-center">
+                            <a href="#"
+                               class="btn-cotizar"
+                               data-modelo="{{ $vehiculo->modelo }}"
+                               aria-label="Cotizar">
+                                Cotizar
+                            </a>
+                            <a href="{{ route('vehiculo_detalles', $vehiculo->id) }}"
+                               class="btn-info"
+                               aria-label="Ver catálogo">
+                                Más información
+                            </a>
                         </div>
-                    @endforeach
-                </div>
-
-                <!-- Flecha Izquierda -->
-                <button type="button" class="arrow-button left-arrow" id="prevTab">
-                    <img src="{{ asset('main/images/elementos/flechaIz.png') }}"
-                         alt="Anterior" class="arrow-img">
-                </button>
-
-                <!-- Flecha Derecha -->
-                <button type="button" class="arrow-button right-arrow" id="nextTab">
-                    <img src="{{ asset('main/images/elementos/flechaDe.png') }}"
-                         alt="Siguiente" class="arrow-img">
-                </button>
-
+                    </div>
+                @endforeach
             </div>
+
+            <!-- Flecha Izquierda (personalizada) -->
+            <button class="carousel-control-prev custom-arrow" type="button"
+                    data-bs-target="#vehicleCarousel" data-bs-slide="prev">
+                <img src="{{ asset('main/images/elementos/flechaIz.png') }}"
+                     alt="Anterior" class="arrow-img">
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <!-- Flecha Derecha (personalizada) -->
+            <button class="carousel-control-next custom-arrow" type="button"
+                    data-bs-target="#vehicleCarousel" data-bs-slide="next">
+                <img src="{{ asset('main/images/elementos/flechaDe.png') }}"
+                     alt="Siguiente" class="arrow-img">
+                <span class="visually-hidden">Siguiente</span>
+            </button>
         </div>
     </div>
+
+
 
 
 

@@ -2,12 +2,6 @@
    SECCIÓN “ITALIAN REVOLUTION” Y OTROS ESTILOS DE LA PÁGINA INICIO
 */
 
-/* Imágenes de vehículos pequeñas (si las usas en alguna parte) */
-.img-small {
-    max-width: 300px;
-    margin: 0 auto;
-}
-
 /* Efecto hover para imágenes */
 .hover-lift {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -15,15 +9,6 @@
 .hover-lift:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Divider y encabezados (si los usas) */
-.featurette-divider {
-    margin: 3rem 0;
-}
-.featurette-heading {
-    font-size: 2rem;
-    margin-top: 0;
 }
 
 /* Texto secundario */
@@ -132,8 +117,9 @@
     }
 }
 
+
 /*
-   SECCIÓN DE VEHÍCULOS (TABS + FLECHAS + BOTONES)
+   SECCIÓN DE VEHÍCULOS (CARRUSEL, FLECHAS PERSONALIZADAS Y BOTONES)
 */
 
 /* Imagen del vehículo a ancho completo */
@@ -143,8 +129,8 @@
     height: auto;
 }
 
-/* Flechas sobre la imagen */
-.arrow-button {
+/* Flechas personalizadas del carrusel */
+.custom-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -153,25 +139,29 @@
     z-index: 10;
     cursor: pointer;
 }
-.left-arrow {
+
+.carousel-control-prev.custom-arrow {
     left: 20px;
 }
-.right-arrow {
+
+.carousel-control-next.custom-arrow {
     right: 20px;
 }
-.arrow-img, .custom-arrow {
+
+.arrow-img {
     width: 40px;
     height: auto;
 }
 
 /* Media query para móviles: ajustar la posición vertical de las flechas */
 @media (max-width: 576px) {
-    .arrow-button {
+    .custom-arrow {
         top: 45%; /* Ajusta este valor según convenga para centrar mejor en móviles */
     }
 }
 
 /* Botones Cotizar / Más info (imagen de fondo) */
+/* Ubicados debajo de la imagen del carrusel */
 .btn-cotizar,
 .btn-info {
     display: inline-block;
@@ -184,7 +174,7 @@
     text-indent: -9999px;
     overflow: hidden;
     cursor: pointer;
-    margin: 10px;  /* Se reduce el margen para evitar excesos */
+    margin: 10px 30px;
 }
 
 .btn-cotizar {
@@ -194,16 +184,3 @@
     background-image: url('../images/elementos/btnmasinfo.png');
 }
 
-/*
-   LÍNEAS ROJAS A LOS LADOS DE LAS TABS
-   (usando el contenedor .tabs-wrapper y .tabs-line)
-*/
-.tabs-wrapper {
-    margin: 1rem 0;
-}
-.tabs-line {
-    width: 300px;
-    height: 5px;
-    background-color: #c00;
-    margin: 0 15px;
-}
