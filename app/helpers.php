@@ -14,7 +14,7 @@ if (!function_exists('tmpfile')) {
         if ($handle === false) {
             throw new \RuntimeException("No se pudo abrir el archivo temporal.");
         }
-        // Opcional: registra una función para eliminar el archivo cuando se cierre el script
+        // Registra una función para eliminar el archivo cuando se cierre el script
         register_shutdown_function(function() use ($tempPath) {
             if (file_exists($tempPath)) {
                 unlink($tempPath);
