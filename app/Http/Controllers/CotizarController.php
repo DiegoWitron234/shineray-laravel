@@ -26,7 +26,7 @@ class CotizarController extends Controller
         ]);
 
         // Asignar un valor por defecto si no se proporcionó el modelo
-        $data['modelo_vehiculo'] = $data['modelo_vehiculo'] ? $data['modelo_vehiculo'] : 'No especificado';
+        $data['modelo_vehiculo'] = $data['modelo_vehiculo'] ?: 'No especificado';
 
         // Enviar el correo utilizando los datos validados
         Mail::send('emails.cotizacion', $data, function ($message) use ($data) {
