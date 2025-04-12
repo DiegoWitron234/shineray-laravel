@@ -17,6 +17,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('main/images/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
 
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     @yield('extra_head')
 </head>
 <body>

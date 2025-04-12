@@ -17,3 +17,34 @@
     .btn-volver {
       margin-top: 20px;
     }
+
+    /*
+    Botones cotizar
+     */
+
+.btn-cotizar {
+    display: inline-block;
+    width: 180px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: none;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px 30px;
+    background-image: url('../images/elementos/btncotizar.png');
+}
+
+/* Contenedor de botones: se posiciona absolutamente al fondo, centrado horizontalmente */
+.buttons-overlay {
+    position: absolute;
+    bottom: 0px;  /* Ajusta este valor para mover los botones hacia arriba o abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;     /* Espacio entre los botones */
+}

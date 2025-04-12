@@ -7,38 +7,35 @@ use Illuminate\Support\Facades\Mail;
 
 class CotizarController extends Controller
 {
+    public function index()
+    {
+        return view('cotizar');
+    }
 
     public function enviar(Request $request)
     {
-        // Validar
-        $request->validate([
-            'estado' => 'required',
-            'codigo_postal' => 'required',
-            'nombre_completo' => 'required',
-            'correo' => 'required|email',
-            'telefono' => 'required',
+        // Validar los datos y almacenarlos en un arreglo
+        $data = $request->validate([
+            'estado'           => 'required',
+            'codigo_postal'    => 'required',
+            'nombre_completo'  => 'required',
+            'correo'           => 'required|email',
+            'telefono'         => 'required',
             'aviso_privacidad' => 'required',
-            'modelo_vehiculo' => 'nullable'
+            'modelo_vehiculo'  => 'nullable'
         ]);
 
-        // Tomar el modelo (si se envió)
-        $modeloVehiculo = $request->input('modelo_vehiculo', 'No especificado');
+        // Asignar un valor por defecto si no se proporcionó el modelo
+        $data['modelo_vehiculo'] = $data['modelo_vehiculo'] ?: 'No especificado';
 
-        // Enviar correo, ejemplo simple:
-        Mail::send('emails.cotizacion', [
-            'estado' => $request->estado,
-            'codigo_postal' => $request->codigo_postal,
-            'nombre_completo' => $request->nombre_completo,
-            'correo' => $request->correo,
-            'telefono' => $request->telefono,
-            'modelo_vehiculo' => $modeloVehiculo
-        ], function($message) {
+        // Enviar el correo utilizando los datos validados
+        Mail::send('emails.cotizacion', $data, function ($message) use ($data) {
             $message->to('pruebas@shineraymotogaleria.com')
-                ->subject('Nueva Cotización');
+                ->subject('Nueva Cotización de ' . $data['nombre_completo'])
+                ->replyTo($data['correo'], $data['nombre_completo']);
         });
 
+        // Redirigir con mensaje de confirmación
         return redirect()->back()->with('status', '¡Solicitud enviada! En breve nos pondremos en contacto contigo.');
     }
-
-
 }

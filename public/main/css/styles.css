@@ -12,12 +12,22 @@
    ESTILOS GLOBALES
    ========================= */
 
-/* Ajuste de tipografía general */
+/* Ajuste de tipografía general
 body, p, h1, h2, h3, h4 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
+ */
+
+body, p, h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    padding: 0;
+}
+
 
 /* Ajuste para que el body deje espacio al navbar fijo (si lo usas así) */
 body {
@@ -191,4 +201,3 @@ footer.bg-light {
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255,255,255,0); }
 }
 
-/* Joaquin no sabe programar */

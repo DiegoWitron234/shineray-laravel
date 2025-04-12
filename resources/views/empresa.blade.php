@@ -69,13 +69,18 @@
                 <div class="col-md-6">
                     <h2 class="text-primary">Misión</h2>
                     <p class="lead">
-                        Ser una empresa que brinde mejores oportunidades de empleo, autoempleo o de negocio a las personas, a través de nuestros mototaxis con el mejor servicio postventa y refacciones.
+                        "Ofrecer soluciones de movilidad accesibles, eficientes y
+                        sostenibles que respeten las culturas locales y optimicen el
+                        transporte de personas y bienes, contribuyendo
+                        activamente al desarrollo económico y social de las
+                        comunidades."
                     </p>
                 </div>
                 <div class="col-md-6">
                     <h2 class="text-primary">Visión</h2>
                     <p class="lead">
-                        Ser parte de la historia de éxito de las familias a nivel nacional y ser vista como una marca que ofrece la mejor opción para tener ingresos para sí mismo.
+                        "Ser la marca lider en moto carros en México, con una sólida participación de
+                        mercado y presencia en Latinoamérica"
                     </p>
                 </div>
             </div>
@@ -112,9 +117,45 @@
                     <h4>Competitividad</h4>
                     <p>Siempre buscamos estar a la vanguardia, ofreciendo los mejores estándares de calidad.</p>
                 </div>
+                <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Orientacion" class="img-fluid mb-2 ">
+                    <h4>Orientacion</h4>
+                    <p>Reconocemos que los clientes, compañeros de
+                        trabajo, proveedores y accionistas son el motor del negocio, por lo tanto,
+                        damos prioridad a sus necesidades y expectativas para mejorar su
+                        satisfacción y decisión de quedarse con nosotros</p>
+                </div>
             </div>
         </div>
     </section>
+    <!-- Reconocimientos -->
+    <section class="section" id="reconocimientos" data-aos="fade-up">
+        <div class="container py-5">
+            <h2 class="text-center text-primary mb-5">Reconocimientos</h2>
+            <div class="row">
+                <div class="col-md-2 text-center" data-aos="zoom-in">
+                    <img src="{{ asset('main/images/Reconocimientos/Comerciomexico.png') }}" alt="Premio a la Innovación" class="img-fluid mb-3 reconocimiento-img hover-lift">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="{{ asset('main/images/Reconocimientos/Derechoshumanos.png') }}" alt="Reconocimiento a la Calidad" class="img-fluid mb-3 reconocimiento-img hover-lift">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/factor360.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/Logo Oficial 2020.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/logoESR.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
+                </div>
+                <div class="col-md-2 text-center" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="{{ asset('main/images/Reconocimientos/ONU.png') }}" alt="Certificación Internacional" class="img-fluid mb-3 reconocimiento-img hover-lift">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

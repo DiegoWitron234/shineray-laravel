@@ -43,7 +43,7 @@
                         <a href="#" class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/TTKW.png') }}" alt="TikTok">
                         </a>
-                        <a href="#" class="contact-networks-icon">
+                        <a href="https://wa.me/529932787360?text=Hola,%20deseo%20informaci%C3%B3n." class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/WAW.png') }}" alt="TikTok">
                         </a>
                     </div>
