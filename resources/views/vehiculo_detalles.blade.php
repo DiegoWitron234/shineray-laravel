@@ -11,73 +11,10 @@
 
     @include('partials.cotizacion-partial')
 
-    <div class="container my-5">
-        <div class="container py-4">
-
-            <!-- Mostrar imagen de precio en la parte superior -->
-            <div class="text-center mb-4">
-                @if($vehiculo->imagen_precio)
-                    <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen_precio) }}"
-                         alt="Precio {{ $vehiculo->modelo }}"
-                         class="img-fluid"
-                         style="max-height: 300px; width: auto; display: block; margin: 0 auto;">
-                @else
-                    <h2 class="text-center">
-                        {{ $vehiculo->tipo }} {{ $vehiculo->modelo }}
-                    </h2>
-                @endif
-            </div>
-
-            <div class="row align-items-center">
-                <!-- Columna Izquierda: Imagen de vehículo con fondo verde (catalogo) -->
-                <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
-                    @if($vehiculo->catalogo)
-                        <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->catalogo) }}"
-                             alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
-                             class="img-fluid"
-                             style="max-height: 500px;">
-                    @else
-                        <img src="{{ asset('main/images/placeholder.svg') }}"
-                             alt="Sin imagen"
-                             class="img-fluid"
-                             style="max-height: 500px;">
-                    @endif
-                </div>
-
-                <!-- Columna Derecha: Imagen con datos (detalles) y botones sobrepuestos -->
-                <div class="col-12 col-md-6">
-                    <!-- Contenedor de la imagen, con posición relativa -->
-                    <div class="details-container position-relative" style="max-height: 500px;">
-                        @if($vehiculo->detalles)
-                            <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->detalles) }}"
-                                 alt="Detalles {{ $vehiculo->modelo }}"
-                                 class="img-fluid details-image"
-                                 style="max-height: 500px; width: 100%;">
-                        @else
-                            <img src="{{ asset('main/images/placeholder.svg') }}"
-                                 alt="Sin imagen de detalles"
-                                 class="img-fluid details-image"
-                                 style="max-height: 500px; width: 100%;">
-                        @endif
-
-                        <!-- Contenedor de botones superpuestos -->
-                        <div class="buttons-overlay">
-                            <a href="#"
-                               class="btn-cotizar me-3"
-                               data-modelo="{{ $vehiculo->modelo }}">
-                                Cotizar
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="text-center">
-            <a href="{{ route('vehiculos') }}" class="btn btn-primary">
-                &laquo; Volver atrás
-            </a>
-        </div>
+    <div class="text-center">
+        <a href="{{ route('vehiculos') }}" class="btn btn-primary btn-back">
+            &laquo; Volver atrás
+        </a>
     </div>
 
     <!-- Sección con las imágenes de "detalles_imagenes" a ancho completo -->

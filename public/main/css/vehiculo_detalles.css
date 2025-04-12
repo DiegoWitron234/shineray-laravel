@@ -48,3 +48,7 @@
     justify-content: center;
     gap: 10px;     /* Espacio entre los botones */
 }
+
+.btn-back {
+    margin-top: 20px; /* Ajusta este valor según el desplazamiento deseado */
+}
