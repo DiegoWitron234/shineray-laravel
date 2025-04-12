@@ -22,7 +22,7 @@
                 <a href="https://www.instagram.com/shineraymotogaleria_/" class="social-icon">
                     <img src="{{ asset('main/images/redes-sociales/iconos-blanco/INW.png') }}" alt="Instagram">
                 </a>
-                <a href="#" class="social-icon">
+                <a href="https://www.youtube.com/@ShinerayMotoGaler%C3%ADa" class="social-icon">
                     <img src="{{ asset('main/images/redes-sociales/iconos-blanco/YTW.png') }}" alt="YouTube">
                 </a>
                 <a href="https://www.tiktok.com/@shineraymoto8" class="social-icon">
