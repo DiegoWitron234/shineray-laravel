@@ -31,19 +31,19 @@
                 <div class="contact-socials">
                     <p>MANTENERSE EN CONTACTO</p>
                     <div class="social-icons">
-                        <a href="#" class="contact-networks-icon">
+                        <a href="https://www.facebook.com/profile.php?id=61573555900035" class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/FBW.png') }}" alt="Facebook">
                         </a>
-                        <a href="#" class="contact-networks-icon">
+                        <a href="https://www.instagram.com/shineraymotogaleria_/" class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/INW.png') }}" alt="Instagram">
                         </a>
                         <a href="#" class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/YTW.png') }}" alt="YouTube">
                         </a>
-                        <a href="#" class="contact-networks-icon">
+                        <a href="https://www.tiktok.com/@shineraymoto8" class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/TTKW.png') }}" alt="TikTok">
                         </a>
-                        <a href="https://wa.me/529932787360?text=Hola,%20deseo%20informaci%C3%B3n." class="contact-networks-icon">
+                        <a href="https://wa.me/529932787360?text=Hola, deseo información." class="contact-networks-icon">
                             <img src="{{ asset('main/images/redes-sociales/iconos-blanco/WAW.png') }}" alt="TikTok">
                         </a>
                     </div>
