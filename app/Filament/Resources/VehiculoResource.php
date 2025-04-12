@@ -52,11 +52,7 @@ class VehiculoResource extends Resource
                     ->directory('detalles_imagenes')
                     ->maxFiles(10)
                     ->reorderable(),
-                // NUEVO: Imagen de precio
-                Forms\Components\FileUpload::make('imagen_precio')
-                    ->image()
-                    ->disk('vehiculos_public')
-                    ->directory('precios'),
+
                 Forms\Components\TextInput::make('carga')
                     ->numeric(),
                 Forms\Components\TextInput::make('motor')

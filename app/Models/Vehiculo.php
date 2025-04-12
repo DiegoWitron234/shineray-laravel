@@ -18,7 +18,6 @@ class Vehiculo extends Model
         'catalogo',        // Imagen para catálogo
         'detalles',        // Imagen con datos (detalles)
         'detalles_imagenes', // Array de imágenes de detalles
-        'imagen_precio',   // Nueva imagen para el precio
         'carga',
         'motor',
         'rendimiento'
