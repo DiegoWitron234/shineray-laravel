@@ -22,8 +22,7 @@ return new class extends Migration
             $table->string('detalles')->nullable();
             // Campo para almacenar las imágenes de detalles (array de rutas)
             $table->json('detalles_imagenes')->nullable();
-            // Nueva columna para la imagen de precio
-            $table->string('imagen_precio')->nullable();
+
             $table->decimal('carga')->nullable();
             $table->decimal('motor')->nullable();
             $table->decimal('rendimiento')->nullable();
