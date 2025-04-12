@@ -14,20 +14,6 @@
     <div class="container my-5">
         <div class="container py-4">
 
-            <!-- Mostrar imagen de precio en la parte superior -->
-            <div class="text-center mb-4">
-                @if($vehiculo->imagen_precio)
-                    <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->imagen_precio) }}"
-                         alt="Precio {{ $vehiculo->modelo }}"
-                         class="img-fluid"
-                         style="max-height: 300px; width: auto; display: block; margin: 0 auto;">
-                @else
-                    <h2 class="text-center">
-                        {{ $vehiculo->tipo }} {{ $vehiculo->modelo }}
-                    </h2>
-                @endif
-            </div>
-
             <div class="row align-items-center">
                 <!-- Columna Izquierda: Imagen de vehículo con fondo verde (catalogo) -->
                 <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
