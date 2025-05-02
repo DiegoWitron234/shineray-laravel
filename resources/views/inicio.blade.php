@@ -23,6 +23,7 @@
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
             @endforeach
         </div>
+        <!--
         <div class="carousel-inner">
             @foreach($banners as $banner)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
@@ -30,6 +31,21 @@
                 </div>
             @endforeach
         </div>
+        -->
+        <div class="carousel-inner">
+            @foreach($banners as $banner)
+                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    @if($banner->link)
+                        <a href="{{ $banner->link }}" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                        </a>
+                    @else
+                        <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                    @endif
+                </div>
+            @endforeach
+        </div>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>

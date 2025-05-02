@@ -90,4 +90,10 @@ class BannerResource extends Resource
             'edit' => Pages\EditBanner::route('/{record}/edit'),
         ];
     }
+
+    public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
+    {
+        return parent::getEloquentQuery()->orderBy('orden');
+    }
+
 }

@@ -30,9 +30,9 @@
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
                         <div class="container py-4">
 
-                            <div class="row align-items-center">
+                            <div class="row align-items-center g-0">
                                 <!-- Columna Izquierda: Imagen de vehículo con fondo verde (catalogo) -->
-                                <div class="col-12 col-md-6 text-center mb-4 mb-md-0">
+                                <div class="col-12 col-md-6 text-center mb-4 mb-md-0 px-0">
                                     @if($vehiculo->catalogo)
                                         <img src="{{ Storage::disk('vehiculos_public')->url($vehiculo->catalogo) }}"
                                              alt="{{ $vehiculo->tipo }} {{ $vehiculo->modelo }}"
@@ -47,7 +47,7 @@
                                 </div>
 
                                 <!-- Columna Derecha: Imagen con datos (detalles) y botones sobrepuestos -->
-                                <div class="col-12 col-md-6">
+                                <div class="col-12 col-md-6 px-0">
                                     <!-- Contenedor de la imagen, con posición relativa -->
                                     <div class="details-container position-relative" style="max-height: 500px;">
                                         @if($vehiculo->detalles)

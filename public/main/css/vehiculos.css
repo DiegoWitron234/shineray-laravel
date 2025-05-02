@@ -99,3 +99,15 @@
 }
 
 
+/* Apunta sólo al carousel para no afectar otras filas */
+#vehiculosCarousel .row {
+    margin-left: 0;
+    margin-right: 0;
+    /* En BS5 también puede usarse: --bs-gutter-x: 0; */
+}
+
+#vehiculosCarousel .row > [class*="col-"] {
+    padding-left: 0;
+    padding-right: 0;
+}
+
