@@ -74,6 +74,12 @@ return [
             'visibility' => 'public',
         ],
 
+        'headers_public' => [
+            'driver'     => 'local',
+            'root'       => public_path('uploads/headers'),
+            'url'        => env('APP_URL') . '/uploads/headers',
+            'visibility' => 'public',
+        ],
 
     ],
 

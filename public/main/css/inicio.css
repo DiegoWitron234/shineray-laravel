@@ -1,5 +1,5 @@
 /*
-   SECCIÓN “ITALIAN REVOLUTION” Y OTROS ESTILOS DE LA PÁGINA INICIO
+   ESTILOS DE LA PÁGINA INICIO
 */
 
 /* Efecto hover para imágenes */
@@ -16,107 +16,6 @@
     font-size: 1.2rem;
     color: #6c757d;
 }
-
-/* Sección Italian Revolution */
-.italian-revolution {
-    background: url('../images/fondos/italian-revolution-bg.png') center/cover no-repeat;
-    color: #fff;
-    padding: 120px 20px;
-    position: relative;
-    z-index: 1;
-    min-height: 500px;
-}
-
-.italian-revolution-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    padding: 30px;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.italian-left, .italian-right {
-    flex: 1;
-}
-
-.italian-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.italian-image {
-    max-width: 400px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0;
-}
-
-.italian-subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1em;
-}
-
-.italian-features {
-    list-style: none;
-    margin: 0;
-}
-.italian-features li {
-    display: flex;
-    align-items: center;
-    margin: 1.2em 0;
-    font-size: 1.1rem;
-}
-.feature-icon {
-    width: 65px;
-    margin-right: 15px;
-}
-
-.italian-desc {
-    font-size: 1rem;
-    margin-bottom: 1em;
-}
-
-.italian-prueba {
-    font-size: 1rem;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-.btn-shineray {
-    display: inline-block;
-    background: url('../images/elementos/btnprobarunshineray.png') no-repeat center center;
-    background-size: 100% 100%;
-    width: 300px;
-    height: 40px;
-    border: none;
-    text-indent: -9999px;
-    overflow: hidden;
-    transition: background 0.3s ease;
-    margin: 1em auto;
-}
-
-.italian-subtitle2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5em;
-}
-
-/* Responsivo para pantallas pequeñas */
-@media (max-width: 768px) {
-    .italian-revolution-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .italian-left, .italian-right {
-        width: 100%;
-        text-align: center;
-    }
-}
-
 
 /*
    SECCIÓN DE VEHÍCULOS (CARRUSEL, FLECHAS PERSONALIZADAS Y BOTONES)

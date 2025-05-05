@@ -16,53 +16,62 @@
 
     @include('partials.whatsapp')
 
-    <!-- Carousel Principal -->
-    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
+    <!-- Carousel headers -->
+
+    <div id="headerCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
         <div class="carousel-indicators">
-            @foreach($banners as $index => $banner)
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+            @foreach($headers as $index => $header)
+                <button
+                    type="button"
+                    data-bs-target="#headerCarousel"
+                    data-bs-slide-to="{{ $index }}"
+                    class="{{ $loop->first ? 'active' : '' }}"
+                    aria-current="{{ $loop->first ? 'true' : 'false' }}"
+                    aria-label="Slide {{ $index + 1 }}"
+                ></button>
             @endforeach
         </div>
-        <!--
         <div class="carousel-inner">
-            @foreach($banners as $banner)
+            @foreach($headers as $header)
                 <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
-                </div>
-            @endforeach
-        </div>
-        -->
-        <div class="carousel-inner">
-            @foreach($banners as $banner)
-                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                    @if($banner->link)
-                        <a href="{{ $banner->link }}" target="_blank" rel="noopener noreferrer">
-                            <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                    @if($header->link)
+                        <a href="{{ $header->link }}" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="{{ Storage::disk('headers_public')->url($header->imagen) }}"
+                                class="d-block w-100"
+                                alt="{{ $header->titulo }}"
+                            >
                         </a>
                     @else
-                        <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                        <img
+                            src="{{ Storage::disk('headers_public')->url($header->imagen) }}"
+                            class="d-block w-100"
+                            alt="{{ $header->titulo }}"
+                        >
                     @endif
                 </div>
             @endforeach
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#headerCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Anterior</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#headerCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Siguiente</span>
         </button>
     </div>
 
 
+
     <!-- Sección vehículos -->
+    <!--
     <div class="container text-center my-2" data-aos="fade-up">
         <h1 class="display-5">Modelos</h1>
         <p class="lead">Mira nuestros modelos</p>
     </div>
-
+    -->
 
     <!-- SECCIÓN VEHÍCULOS con CARRUSEL -->
     <div class="container-fluid my-4">
@@ -120,55 +129,36 @@
         </div>
     </div>
 
-
-
-
-
-    <!-- Sección Italian Revolution -->
-    <section class="italian-revolution">
-        <div class="italian-revolution-content">
-            <!-- Columna Izquierda: Imagen + Íconos -->
-            <div class="italian-left">
-                <img src="{{ asset('main/images/elementos/italianrevolution.png') }}"
-                     alt="Italian Revolution"
-                     class="italian-image">
-
-                <ul class="italian-features">
-                    <li>
-                        <img src="{{ asset('main/images/elementos/cambio-manual.png') }}" alt="Cambio Manual" class="feature-icon">
-                        <strong>Cambio Manual y Automático</strong>
-                    </li>
-                    <li>
-                        <img src="{{ asset('main/images/elementos/motor.png') }}" alt="Motores 1ST" class="feature-icon">
-                        <strong>Motores 1.5T</strong>
-                    </li>
-                    <li>
-                        <img src="{{ asset('main/images/elementos/diseno-inteligente.png') }}" alt="Diseño Inteligente" class="feature-icon">
-                        <strong>Diseño Inteligente</strong>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Columna Derecha: Texto + Botón -->
-            <div class="italian-right">
-                <h3 class="italian-subtitle">
-                    NUEVAS INCORPORACIONES A LA GAMA DE TURISMOS Y VEHÍCULOS COMERCIALES
-                </h3>
-                <p class="italian-desc">
-                    Descubre los nuevos vehículos industriales de Shineray. Solicita una prueba de vehículo
-                </p>
-                <p class="italian-prueba">
-                    Solicita una prueba de vehículo
-                </p>
-                <a href="#" class="btn-shineray">QUIERO PROBAR UN Shineray</a>
-
-                <h4 class="italian-subtitle2">PRUÉBALOS Y SORPRÉNDETE</h4>
-                <p class="italian-desc">
-                    ¡Con 3 años de garantía! Diseño, inteligencia y alma italiana
-                </p>
-            </div>
+    <!-- Carousel Vehiculos -->
+    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
+        <div class="carousel-indicators">
+            @foreach($banners as $index => $banner)
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ $index }}" class="{{ $loop->first ? 'active' : '' }}" aria-current="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}"></button>
+            @endforeach
         </div>
-    </section>
+        <div class="carousel-inner">
+            @foreach($banners as $banner)
+                <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                    @if($banner->link)
+                        <a href="{{ $banner->link }}" target="_blank" rel="noopener noreferrer">
+                            <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                        </a>
+                    @else
+                        <img src="{{ Storage::disk('banners_public')->url($banner->imagen) }}" class="d-block w-100" alt="{{ $banner->titulo }}">
+                    @endif
+                </div>
+            @endforeach
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
 
 
     <!-- AOS JS y otros scripts -->
