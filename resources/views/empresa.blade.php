@@ -63,11 +63,11 @@
     </section>
 
     <!-- Misión y Visión -->
-    <section class="section bg-light" id="mision" data-aos="fade-up">
+    <section class="section" id="mision" data-aos="fade-up">
         <div class="container py-5">
             <div class="row">
                 <div class="col-md-6">
-                    <h2 class="text-primary">Misión</h2>
+                    <h2 class="text-white">Misión</h2>
                     <p class="lead">
                         "Ofrecer soluciones de movilidad accesibles, eficientes y
                         sostenibles que respeten las culturas locales y optimicen el
@@ -77,7 +77,7 @@
                     </p>
                 </div>
                 <div class="col-md-6">
-                    <h2 class="text-primary">Visión</h2>
+                    <h2 class="text-white">Visión</h2>
                     <p class="lead">
                         "Ser la marca lider en moto carros en México, con una sólida participación de
                         mercado y presencia en Latinoamérica"

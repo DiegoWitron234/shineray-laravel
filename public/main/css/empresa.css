@@ -25,3 +25,14 @@
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Sección Misión y Visión con fondo e texto blanco */
+#mision {
+    background: url('../images/elementos/fondomisionyvision.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;              /* color de texto por defecto */
+}
+#mision h2,
+#mision p {
+    color: #fff;              /* asegurar que todos h2 y p sean blancos */
+}
