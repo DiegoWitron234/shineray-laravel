@@ -7,6 +7,7 @@ use App\Http\Controllers\DistribuidoresController;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\VehiculoDetallesController;
 use App\Http\Controllers\CotizarController;
+use App\Http\Controllers\SucursalController;
 use Illuminate\Support\Facades\Route;
 
 // routes/web.php
@@ -18,5 +19,6 @@ Route::get('/vehiculos/{id}', [VehiculoDetallesController::class, 'show'])->name
 Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto');
 Route::post('/contacto', [ContactoController::class, 'send'])->name('contacto.send');
 Route::post('/cotizacion/enviar', [CotizarController::class, 'enviar'])->name('cotizacion.enviar');
+Route::get('/api/sucursales', [SucursalController::class, 'index']);
 
 

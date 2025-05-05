@@ -4,6 +4,10 @@
 
 @section('extra_head')
     <link rel="stylesheet" href="{{ asset('main/css/distribuidores.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
 @endsection
 
 @section('content')
@@ -33,8 +37,13 @@
             </p>
         </div>
 
-       </div>
+    </div>
 
+    <div id="map" style="width: 100%; height: 400px; margin-top: 20px;"></div>
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
     <script src="{{ asset('main/js/distribuidores.js') }}"></script>
 @endsection
 
