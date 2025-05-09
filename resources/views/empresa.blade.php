@@ -13,6 +13,8 @@
 
     @include('partials.whatsapp')
 
+    @include('partials.empresa-modal')
+
     <!-- Imagen Encabezado -->
     <section class="single-page-header">
         <img src="{{ asset('main/images/headers/header.jpg') }}" alt="Historia de la Empresa" class="img-fluid w-100">
@@ -55,7 +57,12 @@
                     <img src="{{ asset('main/images/fondos/fondohistoria.jpg') }}" alt="Historia de Shineray" style="width: 100%; height: auto;">
                     <h2 class="text-primary mb-4">Quiénes somos</h2>
                     <p>
-                        Moto Galería es una empresa fundada el 11 de Agosto de 2006 por un grupo familiar de Chiapas dedicada a la comercialización de moto carros. En el año 2019 se crean lazos con la marca Piaggio y a raíz de esta unión Moto Galería se convierte en importadora y exportadora de moto carros de pasajeros, pick ups y refacciones. Desde entonces, Moto Galería en conjunto con Piaggio se ha expandido a lugares como Colombia, Guatemala, Perú y Estados Unidos.
+                        Moto Galería es una empresa fundada el 11 de Agosto de 2006 por un
+                        grupo familiar de Chiapas dedicada a la comercialización
+                        y distribución de vehículos comerciales. En el año 2024 se
+                        crean lazos con la marca Shineray y a raíz de esta unión
+                        Moto Galería se convierte en importadora y distribuidora de los vehículos Shineray.
+                        Desde 2024, Moto Galería busca expandirse en todo México.
                     </p>
                 </div>
             </div>
@@ -118,8 +125,8 @@
                     <p>Siempre buscamos estar a la vanguardia, ofreciendo los mejores estándares de calidad.</p>
                 </div>
                 <div class="col-md-4 text-center" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="{{ asset('main/images/valores/competitividad.png') }}" alt="Orientacion" class="img-fluid mb-2 ">
-                    <h4>Orientacion</h4>
+                    <img src="{{ asset('main/images/valores/orientacion.jpg') }}" alt="Orientación" class="img-fluid mb-2 ">
+                    <h4>Orientación</h4>
                     <p>Reconocemos que los clientes, compañeros de
                         trabajo, proveedores y accionistas son el motor del negocio, por lo tanto,
                         damos prioridad a sus necesidades y expectativas para mejorar su
@@ -164,4 +171,7 @@
     </script>
     <!-- Script exclusivo para la página Empresa -->
     <script src="{{ asset('main/js/empresa.js') }}"></script>
+
+
+
 @endsection

@@ -1,15 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const btnLeerMas = document.getElementById('btn-leer-mas');
-  const contenedorHistoria = document.getElementById('historia-contenedor');
+    document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modalEmpresa');
+    const overlay = document.getElementById('overlayEmpresa');
+    const btnAbrir = document.getElementById('btn-leer-mas');
+    const btnCerrar = document.getElementById('cerrarEmpresa');
 
-  btnLeerMas.addEventListener('click', function() {
-      // Si el contenedor está colapsado, expandirlo
-    if (contenedorHistoria.style.maxHeight === '' || contenedorHistoria.style.maxHeight === '250px') {
-      contenedorHistoria.style.maxHeight = contenedorHistoria.scrollHeight + 'px';
-      btnLeerMas.textContent = 'Leer menos';
-    } else {
-      contenedorHistoria.style.maxHeight = '250px';
-      btnLeerMas.textContent = 'Leer más';
-    }
-  });
+    btnAbrir.addEventListener('click', e => {
+    e.preventDefault();
+    modal.style.display = 'block';
+});
+    btnCerrar.addEventListener('click', () => modal.style.display = 'none');
+    overlay.addEventListener('click', () => modal.style.display = 'none');
 });

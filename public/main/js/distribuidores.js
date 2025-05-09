@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 marker.bindPopup(`
                     <strong>${s.nombre}</strong><br>
                     ${s.direccion ? s.direccion + '<br>' : ''}
-                    ${s.correo    ? '📧 ' + s.correo + '<br>'    : ''}
+                    C.P.: ${s.codigo_postal ? s.codigo_postal + '<br>' : ''}
+                    ${s.correo    ? '✉ ' + s.correo + '<br>'    : ''}
                     ${s.telefono  ? '📞 ' + s.telefono             : ''}
                 `);
             });

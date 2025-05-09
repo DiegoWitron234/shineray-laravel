@@ -30,14 +30,28 @@
                 Al ser distribuidor de SHINERAY, formarás parte de una marca líder en la creación de vehículos de alto rendimiento, reconocida por su innovación y calidad a nivel mundial.
             </p>
             <p>
-                La inversión inicial se recupera rápidamente en comparación con la competencia, y recibirás capacitación y asesoría permanente para impulsar el crecimiento y desarrollo de tu negocio.
+                La inversión inicial se recupera rápidamente:<br>• Recibir capacitaciones constantes.<br>• Asesoría personalidada.<br>• Posicionamiento en tu negocio.
             </p>
             <p>
-                Contarás con el respaldo de SHINERAY, que te brinda un sólido soporte en todas las áreas de tu negocio, con personal especializado en <strong>REFACCIONES, SERVICIO POST-VENTA y VENTAS.</strong>
+                Contarás con el respaldo de SHINERAY en:
+            </p>
+            <p>
+                <strong>▷️Ventas</strong>
+            </p>
+            <p>
+                <strong>▷️Refacciones</strong>
+            </p>
+            <p>
+                <strong>▷️Servicio</strong>
+            </p>
+            <p>
+                <strong>▷️PostVenta</strong>
             </p>
         </div>
 
     </div>
+
+    <h2 class="title text-center">Ubicaciones</h2>
 
     <div id="map" style="width: 100%; height: 400px; margin-top: 20px;"></div>
 
