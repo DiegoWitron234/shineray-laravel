@@ -14,6 +14,8 @@ if (!function_exists('tmpfile')) {
         if ($handle === false) {
             throw new \RuntimeException("No se pudo abrir el archivo temporal.");
         }
+        // Desactiva el buffer de escritura para que se actualice de inmediato el tamaño
+        //stream_set_write_buffer($handle, 0);
         // Registra una función para eliminar el archivo cuando se cierre el script
         register_shutdown_function(function() use ($tempPath) {
             if (file_exists($tempPath)) {

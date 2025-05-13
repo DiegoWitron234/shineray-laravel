@@ -10,6 +10,11 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
     require $maintenance;
 }
 
+// Carga nuestro helper para emular tmpfile() si está deshabilitado
+if (file_exists(__DIR__ . '/../app/helpers.php')) {
+    require_once __DIR__ . '/../app/helpers.php';
+}
+
 // Register the Composer autoloader...
 require __DIR__.'/../vendor/autoload.php';
 

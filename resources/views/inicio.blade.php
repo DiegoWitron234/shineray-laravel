@@ -79,7 +79,7 @@
         <div class="mt-4"></div>
 
         <!-- Carrusel de Bootstrap -->
-        <div id="vehicleCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="vehicleCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false">
             <div class="carousel-inner">
                 @foreach($vehiculos as $index => $vehiculo)
                     <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
@@ -129,7 +129,7 @@
         </div>
     </div>
 
-    <!-- Carousel Vehiculos -->
+    <!-- Carousel Banners -->
     <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false" data-aos="fade-in">
         <div class="carousel-indicators">
             @foreach($banners as $index => $banner)
